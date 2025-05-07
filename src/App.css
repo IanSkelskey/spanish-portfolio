@@ -4,6 +4,8 @@
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  max-width: 100%; /* Ensure it doesn't exceed viewport width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   /* Add some scroll padding to account for sticky header */
   scroll-padding-top: 130px;
 }
@@ -15,6 +17,7 @@
   display: flex;
   justify-content: center;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Content wrapper centers and contains main content */
@@ -35,6 +38,25 @@
   .content-wrapper {
     padding: 1rem;
     margin: 0 1rem;
+  }
+}
+
+/* Adjust margins for very small screens */
+@media (max-width: 360px) {
+  .app-container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .main-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .content-wrapper {
+    margin: 0 !important;
+    padding: 0 !important; /* Keep minimal padding for content readability */
+    border-radius: 0 !important; /* Remove border radius on small screens */
   }
 }
 

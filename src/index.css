@@ -31,12 +31,19 @@ body {
   transition: background 0.3s, color 0.3s;
   font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Apply border-box to all elements */
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 #root {
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 h1, h2, .section-title {
@@ -78,9 +85,25 @@ button:focus-visible {
 /* Responsive helpers */
 @media (max-width: 600px) {
   #root {
-    padding: 0.5rem;
+    padding: 0;
   }
   h1 {
     font-size: 1.5em;
+  }
+}
+
+/* Ensure no padding on root level elements for small screens */
+@media (max-width: 480px) {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  #root {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
 }

@@ -5,87 +5,83 @@
   top: 0;
   z-index: 1000;
   /* Semi-transparent background */
-  background: rgba(59, 119, 176, 0.85);
+  background: rgba(59, 119, 176, 0.9);
   /* Add backdrop blur */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   
   color: var(--color-argentina-white);
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
-  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  margin-bottom: 1rem;
   /* Ensure transitions are smooth */
   transition: background 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .header-container {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 0.8rem 2rem 0.5rem;
+  padding: 0.4rem 1rem;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
-.header-logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-}
-
-.header-logo {
-  font-size: 1.8rem;
-  margin-right: 0.8rem;
-  user-select: none;
-}
-
-.header-title {
-  margin: 0;
-  font-family: 'Milonga', serif;
-  font-size: 1.5rem;
-  color: var(--color-argentina-gold);
-  letter-spacing: 0.02em;
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    padding: 0.6rem 1rem;
-    gap: 0.3rem;
-  }
-  
-  .header-title {
-    font-size: 1.2rem;
-  }
-  
-  /* Make space for the hamburger menu button */
-  .header-logo-link {
-    padding-right: 40px;
-  }
-}
-
-/* Improve navbar positioning within header */
+/* Simplified navbar within header */
 .site-header nav {
-  margin-bottom: 0;
-  /* Make the nav background transparent to show the blurred header background */
-  background: rgba(255, 255, 255, 0.08);
+  margin: 0;
+  background: transparent;
   box-shadow: none;
-  padding-top: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  /* Contain the scrolling to prevent page overflow */
+  padding: 0;
   max-width: 100%;
+  /* Remove border that was separating header sections */
+  border-top: none;
 }
 
 /* Add a class for when header is scrolled down */
 .site-header.scrolled {
   background: rgba(59, 119, 176, 0.95);
-  box-shadow: 0 3px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.15);
 }
 
 /* Fallback for browsers that don't support backdrop-filter */
 @supports not (backdrop-filter: blur(8px)) {
   .site-header {
-    background: rgba(59, 119, 176, 0.95);
+    background: rgba(59, 119, 176, 0.98);
+  }
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  .site-header {
+    margin-bottom: 0.5rem;
+  }
+  
+  .header-container {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* Remove horizontal padding for very small screens */
+@media (max-width: 480px) {
+  .site-header {
+    margin-bottom: 0;
+    margin: 0 !important; /* Force no margins */
+  }
+  
+  .header-container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .site-header nav {
+    padding: 0 !important;
+  }
+  
+  /* Ensure all potential elements inside have no padding */
+  .site-header * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

@@ -5,6 +5,7 @@
   color: var(--color-argentina-white);
   padding: 1rem 0;
   margin-top: 2.5rem;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .footer-inner {
@@ -18,8 +19,26 @@
 }
 
 @media (max-width: 600px) {
+  .site-footer {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  
   .footer-inner {
     padding: 0 1rem;
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    margin-top: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .footer-inner {
+    padding: 0.5rem 0 !important; /* Keep minimal vertical padding for text readability */
+    margin: 0 !important;
   }
 }

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Header.css';
 import NavBar from './NavBar';
@@ -9,8 +8,8 @@ function Header() {
   // Add scroll event listener to enhance header on scroll
   useEffect(() => {
     const handleScroll = () => {
-      // Add scrolled class after scrolling 30px
-      const isScrolled = window.scrollY > 30;
+      // Add scrolled class after scrolling 20px
+      const isScrolled = window.scrollY > 20;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
@@ -27,12 +26,6 @@ function Header() {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        {/* Logo and title */}
-        <Link to="/" className="header-logo-link">
-          <span className="header-logo" aria-hidden="true">🇦🇷</span>
-          <h1 className="header-title">Mi Portfolio de Español</h1>
-        </Link>
-        
         {/* Navigation */}
         <NavBar />
       </div>

@@ -1,7 +1,7 @@
 nav {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
   border-radius: var(--border-radius);
-  padding: 0.5rem;
+  padding: 0.3rem;
   position: relative;
 }
 
@@ -89,13 +89,9 @@ nav a:hover, nav a.active {
 /* Desktop layout - horizontal menu */
 @media (min-width: 769px) {
   .nav-menu {
-    flex-wrap: nowrap;
     justify-content: center;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding: 0.2rem;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-accent) transparent;
+    gap: 0.7rem;
+    padding: 0.1rem;
   }
   
   /* Hide scrollbar for cleaner look */
@@ -112,7 +108,7 @@ nav a:hover, nav a.active {
 /* Mobile layout - vertical dropdown menu */
 @media (max-width: 768px) {
   nav {
-    padding: 0.5rem;
+    padding: 0.3rem;
     display: flex;
     flex-direction: column;
   }
@@ -120,6 +116,7 @@ nav a:hover, nav a.active {
   .menu-toggle {
     display: block;
     align-self: flex-end;
+    padding: 0.6rem 0.4rem;
   }
   
   .nav-menu {
@@ -143,5 +140,19 @@ nav a:hover, nav a.active {
     padding: 0.5em;
     text-align: center;
     border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0;
+  }
+  
+  .menu-toggle {
+    padding: 0.5rem 0.2rem; /* Keep minimal padding for touch target */
+  }
+  
+  nav a {
+    padding: 0.4em;
   }
 }
