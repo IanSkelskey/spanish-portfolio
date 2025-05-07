@@ -15,7 +15,7 @@ import PlanAccion from './pages/PlanAccion';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/spanish-portfolio">
       <div className="app-container">
         <Header />
         <main className="main-content">
