@@ -1,0 +1,36 @@
+/* vars.css - Argentina-inspired, accessible, web-friendly color palette and variables */
+:root {
+  /* Argentina flag colors (light mode) */
+  --color-argentina-blue: #74acdf;
+  --color-argentina-sky: #b4dbf6;
+  --color-argentina-white: #ffffff;
+  --color-argentina-gold: #f6c915;
+  --color-argentina-dark-blue: #3a6ea5;
+  --color-argentina-gray: #e5e7eb;
+
+  /* General UI colors */
+  --color-bg: var(--color-argentina-sky);
+  --color-bg-alt: var(--color-argentina-white);
+  --color-text: #213547;
+  --color-link: var(--color-argentina-dark-blue);
+  --color-link-hover: var(--color-argentina-blue);
+  --color-nav-bg: var(--color-argentina-blue);
+  --color-nav-text: var(--color-argentina-white);
+  --color-accent: var(--color-argentina-gold);
+  --border-radius: 10px;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a2233;
+    --color-bg-alt: #232b3e;
+    --color-text: #f3f6fa;
+    --color-link: #b4dbf6;
+    --color-link-hover: #74acdf;
+    --color-nav-bg: #3a6ea5;
+    --color-nav-text: #f3f6fa;
+    --color-accent: #f6c915;
+    --color-argentina-gray: #2c3446;
+  }
+}
