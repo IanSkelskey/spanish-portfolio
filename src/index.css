@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Milonga&display=swap');
 @import url('./vars.css');
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -30,6 +31,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, .section-title {
+  font-family: 'Milonga', serif;
 }
 
 h1 {
