@@ -1,0 +1,142 @@
+/* Introduction page specific styles */
+
+/* Academic info card */
+.academic-info-card {
+  background: linear-gradient(145deg, var(--color-argentina-blue), var(--color-argentina-dark-blue));
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.academic-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.academic-item {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0.25rem;
+}
+
+.academic-value {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Profile section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Introduction text */
+.introduction-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Social links */
+.social-links {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-argentina-gray);
+}
+
+.social-links a {
+  font-weight: 600;
+  color: var(--color-link);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Quote section */
+.quote-section {
+  background: linear-gradient(145deg, var(--color-argentina-dark-blue), var(--color-argentina-blue));
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  color: white;
+  text-align: center;
+}
+
+.quote-section blockquote {
+  margin: 0;
+  font-family: 'Milonga', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.4;
+  position: relative;
+}
+
+.quote-section cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Video section */
+.video-intro {
+  margin: 2rem 0;
+}
+
+.video-placeholder {
+  background: var(--color-argentina-gray);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .profile-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .profile-image {
+    max-width: 300px;
+  }
+  
+  .academic-item {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .academic-info-card {
+    padding: 1rem;
+  }
+}

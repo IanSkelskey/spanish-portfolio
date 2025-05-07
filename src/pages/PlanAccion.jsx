@@ -11,7 +11,15 @@ function PlanAccion() {
           className="plan-banner" 
         />
         <p>
-          Mi estrategia para continuar desarrollando mis habilidades en español.
+          Mi estrategia para continuar desarrollando mis habilidades en español después de completar este curso.
+        </p>
+      </div>
+      
+      {/* Action Plan Reflection - Required */}
+      <div className="plan-reflection card">
+        <h3>Reflexión sobre mis objetivos futuros</h3>
+        <p>
+          [Write your reflection about your new goals or goals from your Vision Board that you'd like to continue pursuing - minimum 100 words]
         </p>
       </div>
       

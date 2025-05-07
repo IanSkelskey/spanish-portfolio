@@ -113,17 +113,59 @@
   border-radius: var(--border-radius);
 }
 
+/* Reflection instruction text */
+.reflection-instruction {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+/* Skill sections for assignments */
+.skill-section {
+  margin: 2.5rem 0;
+}
+
+.skill-section h3 {
+  border-bottom: 2px solid var(--color-argentina-gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Reflection boxes within projects */
+.reflection-box {
+  background: #f8f9fa;
+  border-left: 3px solid var(--color-argentina-gold);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.reflection-box h5 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--color-argentina-dark-blue);
+}
+
+/* Video placeholders */
+.video-placeholder {
+  background: var(--color-argentina-gray);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .reflection-box {
+    background: #2a2a2a;
+    border-left: 3px solid var(--color-accent);
+  }
+}
+
 /* Media queries for responsiveness */
 @media (min-width: 768px) {
-  .profile-section {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  
-  .profile-image {
-    max-width: 300px;
-  }
-  
   .timeline {
     flex-direction: row;
   }

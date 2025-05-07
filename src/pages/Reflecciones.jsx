@@ -10,29 +10,35 @@ function Reflecciones() {
         </blockquote>
       </div>
       
-      <h3>Mi viaje de aprendizaje</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum 
-        a arcu cursus vitae congue mauris rhoncus. Aenean imperdiet. Etiam ultricies 
-        nisi vel augue. Curabitur ullamcorper ultricies nisi.
-      </p>
-      
-      <div className="reflection-grid">
+      {/* Goals Achieved Section - Required */}
+      <div className="reflection-section">
+        <h3>Objetivos cumplidos</h3>
+        <p className="reflection-instruction">Revisit your Vision Board from the first week and reflect on which goals you've achieved and which ones you're still working towards.</p>
         <div className="reflection-card">
-          <h4>Lo que he aprendido</h4>
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-            veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            [Write your reflection here about your achieved goals and progress - minimum 100 words]
           </p>
         </div>
-        
+      </div>
+      
+      {/* Practical Use of Spanish - Required */}
+      <div className="reflection-section">
+        <h3>Uso del Español</h3>
+        <p className="reflection-instruction">Reflect on your experiences using Spanish in real life and how you plan to use it in the future.</p>
         <div className="reflection-card">
-          <h4>Desafíos superados</h4>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
-            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
-            excepturi sint occaecati cupiditate non provident.
+            [Write about your practical experiences using Spanish and future plans - minimum 100 words]
+          </p>
+        </div>
+      </div>
+      
+      {/* Learning Process Reflection - Required */}
+      <div className="reflection-section">
+        <h3>Mi proceso de aprendizaje</h3>
+        <p className="reflection-instruction">Compare your Spanish knowledge/skills from the beginning to the end of the course, and reflect on the learning process.</p>
+        <div className="reflection-card">
+          <p>
+            [Write about your learning process, what worked, what didn't, favorite assignments, etc. - minimum 100 words]
           </p>
         </div>
       </div>

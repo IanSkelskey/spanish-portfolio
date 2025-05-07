@@ -4,62 +4,106 @@ import '../pages/Pages.css';
 function Asignaciones() {
   return (
     <PageWrapper title="Asignaciones / Proyectos">
-      <div className="projects-grid">
-        <div className="project-card">
-          <h3>Proyecto 1: Presentación personal</h3>
-          <img 
-            src="https://placehold.co/300x200?text=Proyecto+1" 
-            alt="Proyecto 1" 
-          />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum 
-            a arcu cursus vitae congue mauris rhoncus.
-          </p>
-          <a href="#" className="project-link">Ver proyecto</a>
-        </div>
-        
-        <div className="project-card">
-          <h3>Proyecto 2: Investigación cultural</h3>
-          <img 
-            src="https://placehold.co/300x200?text=Proyecto+2" 
-            alt="Proyecto 2" 
-          />
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-            doloremque laudantium, totam rem aperiam.
-          </p>
-          <a href="#" className="project-link">Ver proyecto</a>
-        </div>
-        
-        <div className="project-card">
-          <h3>Proyecto 3: Narración</h3>
-          <img 
-            src="https://placehold.co/300x200?text=Proyecto+3" 
-            alt="Proyecto 3" 
-          />
-          <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
-            praesentium voluptatum deleniti atque.
-          </p>
-          <a href="#" className="project-link">Ver proyecto</a>
-        </div>
+      <div className="assignments-intro">
+        <h2>Mi progreso en las cuatro habilidades</h2>
+        <p>Esta sección contiene ejemplos de mi trabajo que demuestran mi crecimiento en las cuatro habilidades del idioma español.</p>
       </div>
       
-      <h3>Otras asignaciones</h3>
-      <ul className="assignment-list">
-        <li>
-          <strong>Composición 1:</strong> Descripción de mi familia
-          <a href="#" className="assignment-link">Leer</a>
-        </li>
-        <li>
-          <strong>Ejercicio de gramática:</strong> Pretérito vs. Imperfecto
-          <a href="#" className="assignment-link">Ver</a>
-        </li>
-        <li>
-          <strong>Presentación oral:</strong> Mi lugar favorito
-          <a href="#" className="assignment-link">Ver grabación</a>
-        </li>
-      </ul>
+      {/* Listening Section - Required */}
+      <div className="skill-section">
+        <h3>Comprensión auditiva (Listening)</h3>
+        <div className="projects-grid">
+          <div className="project-card">
+            <h4>Proyecto de comprensión auditiva</h4>
+            <img 
+              src="https://placehold.co/300x200?text=Listening" 
+              alt="Listening Assignment" 
+            />
+            <div className="reflection-box">
+              <h5>Reflection</h5>
+              <p>[Write your reflection here in English - min 100 words]</p>
+            </div>
+            <a href="#" className="project-link">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Reading Section - Required */}
+      <div className="skill-section">
+        <h3>Comprensión de lectura (Reading)</h3>
+        <div className="projects-grid">
+          <div className="project-card">
+            <h4>Proyecto de lectura</h4>
+            <img 
+              src="https://placehold.co/300x200?text=Reading" 
+              alt="Reading Assignment" 
+            />
+            <div className="reflection-box">
+              <h5>Reflection</h5>
+              <p>[Write your reflection here in English - min 100 words]</p>
+            </div>
+            <a href="#" className="project-link">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Speaking Section - Required (at least 2 with one video) */}
+      <div className="skill-section">
+        <h3>Expresión oral (Speaking)</h3>
+        <div className="projects-grid">
+          <div className="project-card">
+            <h4>Presentación oral 1</h4>
+            <div className="video-placeholder">
+              [Video will be embedded here]
+            </div>
+            <div className="reflection-box">
+              <h5>Reflection</h5>
+              <p>[Write your reflection here in English - min 100 words]</p>
+            </div>
+            <a href="#" className="project-link">Ver proyecto</a>
+          </div>
+          
+          <div className="project-card">
+            <h4>Presentación oral 2</h4>
+            <img 
+              src="https://placehold.co/300x200?text=Speaking+Assignment" 
+              alt="Speaking Assignment" 
+            />
+            <div className="reflection-box">
+              <h5>Reflection</h5>
+              <p>[Write your reflection here in English - min 100 words]</p>
+            </div>
+            <a href="#" className="project-link">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Writing Section - Required */}
+      <div className="skill-section">
+        <h3>Expresión escrita (Writing)</h3>
+        <div className="projects-grid">
+          <div className="project-card">
+            <h4>Proyecto de escritura</h4>
+            <img 
+              src="https://placehold.co/300x200?text=Writing" 
+              alt="Writing Assignment" 
+            />
+            <div className="reflection-box">
+              <h5>Reflection</h5>
+              <p>[Write your reflection here in English - min 100 words]</p>
+            </div>
+            <a href="#" className="project-link">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Projects - To meet 5-7 requirement */}
+      <div className="skill-section">
+        <h3>Proyectos adicionales</h3>
+        <div className="projects-grid">
+          {/* Add more projects as needed to meet 5-7 requirement */}
+        </div>
+      </div>
     </PageWrapper>
   );
 }

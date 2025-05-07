@@ -4,7 +4,16 @@ import '../pages/Pages.css';
 function Objetivos() {
   return (
     <PageWrapper title="Mis objetivos / Vision Board">
+      {/* Prior Knowledge Section - Required */}
+      <div className="prior-knowledge card">
+        <h3>Mi conocimiento de español antes de la clase</h3>
+        <p>
+          [This section should describe your knowledge of Spanish language and culture before or at the beginning of this class. Write this in English as specified in the requirements.]
+        </p>
+      </div>
+      
       <div className="vision-board">
+        <h3>Mi Vision Board</h3>
         <img 
           src="https://placehold.co/800x400?text=Vision+Board" 
           alt="Vision Board" 

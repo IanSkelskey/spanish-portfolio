@@ -12,6 +12,14 @@ function Cultura() {
         />
       </div>
       
+      {/* Reflexión sobre la conciencia cultural - Requerido */}
+      <div className="culture-reflection card">
+        <h3>Mi desarrollo de conciencia cultural</h3>
+        <p>
+          [Escribe aquí tu reflexión sobre lo que aprendiste acerca de la cultura hispana y cómo desarrollaste tu conciencia cultural durante esta clase. Esto debe estar en inglés y tener al menos 100 palabras.]
+        </p>
+      </div>
+      
       <h3>Aspectos culturales explorados</h3>
       <div className="culture-grid">
         <div className="culture-card">
