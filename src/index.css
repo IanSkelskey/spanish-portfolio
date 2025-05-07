@@ -38,6 +38,12 @@ h1 {
   color: var(--color-argentina-dark-blue);
 }
 
+@media (prefers-color-scheme: dark) {
+  h1 {
+    color: #80b1e3; /* Lighter blue for better contrast in dark mode */
+  }
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

@@ -1,0 +1,134 @@
+/* Shared styles for all pages */
+.profile-image, .vision-image, .culture-banner, .plan-banner {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--color-argentina-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Project cards */
+.projects-grid, .culture-grid, .reflection-grid, .resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.project-card, .culture-card, .reflection-card, .resource-card {
+  background: var(--color-argentina-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition);
+}
+
+.project-card:hover, .culture-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img, .culture-card img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.project-link, .assignment-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--color-link);
+  font-weight: 500;
+}
+
+/* Goals section */
+.goals-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* Timeline for plan de acción */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.timeline-item {
+  background: var(--color-argentina-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--color-accent);
+}
+
+/* Reflection quote */
+.reflection-quote {
+  background: #3b77b0; /* Darker background for better contrast with text */
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.reflection-quote blockquote {
+  margin: 0;
+  font-style: italic;
+  color: #ffffff; /* White text for better contrast on the darker background */
+}
+
+/* Countries section */
+.countries-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.country {
+  background: var(--color-argentina-gray);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .profile-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .profile-image {
+    max-width: 300px;
+  }
+  
+  .timeline {
+    flex-direction: row;
+  }
+  
+  .timeline-item {
+    flex: 1;
+  }
+}
