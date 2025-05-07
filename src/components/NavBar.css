@@ -1,0 +1,147 @@
+nav {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  position: relative;
+}
+
+/* Shared navigation styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  font-size: 0.95em;
+  white-space: nowrap;
+}
+
+nav a {
+  color: var(--color-argentina-white);
+  padding: 0.3em 0.7em;
+  border-radius: var(--border-radius);
+  transition: all var(--transition);
+  display: block;
+  font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+  background: var(--color-accent);
+  color: #000000;
+}
+
+/* Menu toggle button (hidden by default) */
+.menu-toggle {
+  display: none;
+  padding: 0.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-argentina-white);
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-argentina-white);
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s;
+}
+
+.menu-icon::before {
+  top: -6px;
+}
+
+.menu-icon::after {
+  bottom: -6px;
+}
+
+/* Active menu icon (X shape) */
+.menu-open .menu-icon {
+  background-color: transparent;
+}
+
+.menu-open .menu-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-open .menu-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Desktop layout - horizontal menu */
+@media (min-width: 769px) {
+  .nav-menu {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) transparent;
+  }
+  
+  /* Hide scrollbar for cleaner look */
+  .nav-menu::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .nav-menu::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 4px;
+  }
+}
+
+/* Mobile layout - vertical dropdown menu */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .menu-open .nav-menu {
+    max-height: 300px; /* Adjust based on your menu height */
+  }
+  
+  nav li {
+    width: 100%;
+  }
+  
+  nav a {
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 4px;
+  }
+}

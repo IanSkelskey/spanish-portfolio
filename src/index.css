@@ -23,15 +23,20 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
   background: var(--color-bg);
   color: var(--color-text);
   transition: background 0.3s, color 0.3s;
+  font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 h1, h2, .section-title {
