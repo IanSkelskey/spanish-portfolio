@@ -3,7 +3,7 @@
 
 :root {
   font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,6 +17,7 @@ a {
   text-decoration: inherit;
   transition: color var(--transition);
 }
+
 a:hover {
   color: var(--color-link-hover);
 }
@@ -29,9 +30,12 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   transition: background 0.3s, color 0.3s;
-  font-family: 'Archivo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
+  /* Ensure smooth scrolling for the sticky header */
+  scroll-behavior: smooth;
+  /* Prevent content shift when scrollbar appears */
+  overflow-y: scroll;
 }
 
 /* Apply border-box to all elements */
@@ -46,54 +50,108 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, .section-title {
+h1, h2, h3, .section-title {
   font-family: 'Milonga', serif;
-}
-
-h1 {
-  font-size: 2.2em;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-top: 0;
   color: var(--color-argentina-dark-blue);
 }
 
-@media (prefers-color-scheme: dark) {
-  h1 {
-    color: #80b1e3; /* Lighter blue for better contrast in dark mode */
-  }
+h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Modern underline for headings */
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  padding: 0.7em 1.4em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-argentina-dark-blue);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all var(--transition);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: var(--color-accent);
+  color: var(--color-argentina-text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3 {
+    color: #9DCFFF;
+  }
+}
 
 /* Responsive helpers */
-@media (max-width: 600px) {
-  #root {
-    padding: 0;
-  }
+@media (max-width: 768px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
   }
 }
 
-/* Ensure no padding on root level elements for small screens */
 @media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
   html, body {
     margin: 0 !important;
     padding: 0 !important;

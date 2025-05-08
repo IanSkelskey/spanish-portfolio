@@ -1,87 +1,123 @@
 .site-header {
   width: 100%;
-  /* Make header sticky */
-  position: sticky;
+  position: fixed; /* Change from sticky to fixed for guaranteed stickiness */
   top: 0;
-  z-index: 1000;
-  /* Semi-transparent background */
-  background: rgba(59, 119, 176, 0.9);
-  /* Add backdrop blur */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  
-  color: var(--color-argentina-white);
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
-  margin-bottom: 1rem;
-  /* Ensure transitions are smooth */
-  transition: background 0.3s, box-shadow 0.3s;
-  overflow: hidden; /* Prevent overflow */
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  background: rgba(249, 249, 251, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+  height: var(--header-height);
 }
+
+/* Remove the iOS-specific support code since we're using fixed now */
 
 .header-container {
-  max-width: 1100px;
+  max-width: var(--content-width);
   width: 100%;
   margin: 0 auto;
-  padding: 0.4rem 1rem;
+  padding: 0 1.5rem;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-/* Simplified navbar within header */
+/* Add logo/title to header */
+.site-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.site-logo img {
+  height: 38px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.site-title {
+  font-family: 'Milonga', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-argentina-dark-blue);
+  margin: 0;
+}
+
+/* Update navbar within header */
 .site-header nav {
   margin: 0;
   background: transparent;
   box-shadow: none;
   padding: 0;
-  max-width: 100%;
-  /* Remove border that was separating header sections */
-  border-top: none;
+  flex: 1;
 }
 
-/* Add a class for when header is scrolled down */
+/* Enhanced scrolled state */
 .site-header.scrolled {
-  background: rgba(59, 119, 176, 0.95);
-  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.15);
+  background: rgba(249, 249, 251, 0.95);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  height: 60px; /* Slightly smaller when scrolled */
 }
 
-/* Fallback for browsers that don't support backdrop-filter */
-@supports not (backdrop-filter: blur(8px)) {
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
   .site-header {
-    background: rgba(59, 119, 176, 0.98);
+    background: rgba(18, 21, 32, 0.8); /* Dark mode background with transparency */
+  }
+  
+  .site-header.scrolled {
+    background: rgba(18, 21, 32, 0.95);
+  }
+  
+  .site-title {
+    color: #9DCFFF;
   }
 }
 
-/* Adjust padding for smaller screens */
+/* Support for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(12px)) {
+  .site-header {
+    background: rgba(249, 249, 251, 0.95);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .site-header {
+      background: rgba(18, 21, 32, 0.95);
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
     margin-bottom: 0.5rem;
+    height: 60px;
   }
   
   .header-container {
-    padding: 0.3rem 0.5rem;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+  
+  .site-title {
+    font-size: 1rem;
   }
 }
 
-/* Remove horizontal padding for very small screens */
 @media (max-width: 480px) {
   .site-header {
-    margin-bottom: 0;
-    margin: 0 !important; /* Force no margins */
+    height: 55px;
   }
   
-  .header-container {
-    padding: 0 !important;
-    margin: 0 !important;
+  .site-logo img {
+    height: 30px;
   }
   
-  .site-header nav {
-    padding: 0 !important;
-  }
-  
-  /* Ensure all potential elements inside have no padding */
-  .site-header * {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  .site-title {
+    display: none; /* Hide text title on very small screens */
   }
 }

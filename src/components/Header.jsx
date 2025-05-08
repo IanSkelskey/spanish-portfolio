@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import NavBar from './NavBar';
 
@@ -26,6 +27,12 @@ function Header() {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
+        {/* Site logo/title */}
+        <Link to="/" className="site-logo">
+          <img src="/spanish-portfolio/logo.svg" alt="Portfolio logo" />
+          <h2 className="site-title">Español Portfolio</h2>
+        </Link>
+        
         {/* Navigation */}
         <NavBar />
       </div>

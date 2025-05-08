@@ -1,36 +1,44 @@
 /* vars.css - Argentina-inspired, accessible, web-friendly color palette and variables */
 :root {
-  /* Argentina flag colors (light mode) */
-  --color-argentina-blue: #3b77b0; /* Darkened for better contrast */
-  --color-argentina-sky: #92c4e9; /* Darkened for better contrast */
+  /* Argentina flag colors (light mode) - modernized */
+  --color-argentina-blue: #75AADB; /* Original sky blue */
+  --color-argentina-dark-blue: #3A6EA5; /* Darker blue for contrast */
   --color-argentina-white: #ffffff;
-  --color-argentina-gold: #f6c915;
-  --color-argentina-dark-blue: #3a6ea5;
-  --color-argentina-gray: #e5e7eb;
-
+  --color-argentina-gold: #FCBF49; /* Warmer gold */
+  --color-argentina-gray: #f0f2f5;
+  --color-argentina-text: #2C3E50; /* Cleaner, more modern text color */
+  
   /* General UI colors */
-  --color-bg: var(--color-argentina-sky);
+  --color-bg: #f9f9fb;
   --color-bg-alt: var(--color-argentina-white);
-  --color-text: #213547;
+  --color-text: var(--color-argentina-text);
   --color-link: var(--color-argentina-dark-blue);
   --color-link-hover: var(--color-argentina-blue);
-  --color-nav-bg: var(--color-argentina-blue);
-  --color-nav-text: var(--color-argentina-white);
+  --color-nav-bg: transparent;
+  --color-nav-text: var(--color-text);
   --color-accent: var(--color-argentina-gold);
+  
+  /* Modern design variables */
   --border-radius: 10px;
-  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+  --border-radius-sm: 8px;
+  --card-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  --transition: 0.25s cubic-bezier(.4,0,.2,1);
+  --content-width: 1200px;
+  --header-height: 65px; /* Make sure this is defined correctly */
+  --section-spacing: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #1a2233;
-    --color-bg-alt: #232b3e;
-    --color-text: #f3f6fa;
-    --color-link: #c4e3fa; /* Lightened for better contrast */
+    --color-bg: #121520;
+    --color-bg-alt: #1E2232;
+    --color-text: #E8EDF2;
+    --color-link: #9DCFFF;
     --color-link-hover: #ffffff;
-    --color-nav-bg: #295888; /* Darkened for better contrast */
+    --color-nav-bg: #2D4D7A;
     --color-nav-text: #ffffff;
-    --color-accent: #ffd633; /* Brightened for better contrast */
+    --color-accent: #FFD166;
     --color-argentina-gray: #2c3446;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
 }

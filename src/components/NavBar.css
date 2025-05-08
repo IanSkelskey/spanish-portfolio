@@ -1,8 +1,8 @@
 nav {
   background: transparent;
   border-radius: var(--border-radius);
-  padding: 0.3rem;
   position: relative;
+  width: 100%;
 }
 
 /* Shared navigation styles */
@@ -11,25 +11,64 @@ nav {
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: flex-end;
+  gap: 0.2rem;
 }
 
 nav li {
-  font-size: 0.95em;
+  font-size: 0.95rem;
   white-space: nowrap;
 }
 
 nav a {
-  color: var(--color-argentina-white);
-  padding: 0.3em 0.7em;
-  border-radius: var(--border-radius);
+  color: var(--color-text);
+  padding: 0.5em 0.9em;
+  border-radius: var(--border-radius-sm);
   transition: all var(--transition);
   display: block;
   font-weight: 500;
+  position: relative;
 }
 
-nav a:hover, nav a.active {
+nav a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-link);
+}
+
+/* Modern active indicator */
+nav a.active {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-argentina-dark-blue);
+  font-weight: 600;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
   background: var(--color-accent);
-  color: #000000;
+  border-radius: 2px;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  nav a {
+    color: var(--color-text);
+  }
+  
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  nav a.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
 }
 
 /* Menu toggle button (hidden by default) */
@@ -40,9 +79,16 @@ nav a:hover, nav a.active {
   border: none;
   cursor: pointer;
   margin-left: auto;
+  box-shadow: none;
 }
 
-/* Hamburger icon */
+.menu-toggle:hover {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Improved hamburger icon */
 .menu-icon {
   display: block;
   width: 24px;
@@ -89,47 +135,46 @@ nav a:hover, nav a.active {
 /* Desktop layout - horizontal menu */
 @media (min-width: 769px) {
   .nav-menu {
-    justify-content: center;
-    gap: 0.7rem;
-    padding: 0.1rem;
-  }
-  
-  /* Hide scrollbar for cleaner look */
-  .nav-menu::-webkit-scrollbar {
-    height: 4px;
-  }
-  
-  .nav-menu::-webkit-scrollbar-thumb {
-    background: var(--color-accent);
-    border-radius: 4px;
+    gap: 0.5rem;
   }
 }
 
-/* Mobile layout - vertical dropdown menu */
+/* Mobile layout - modern dropdown menu */
 @media (max-width: 768px) {
   nav {
-    padding: 0.3rem;
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
   }
   
   .menu-toggle {
     display: block;
-    align-self: flex-end;
-    padding: 0.6rem 0.4rem;
+    z-index: 1001;
   }
   
   .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
     flex-direction: column;
-    width: 100%;
-    gap: 0.2rem;
+    width: 200px;
+    gap: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.4s ease-out;
+    background: var(--color-argentina-dark-blue);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--card-shadow);
+    opacity: 0;
+    transform: translateY(-10px);
+    z-index: 1000;
   }
   
   .menu-open .nav-menu {
-    max-height: 300px; /* Adjust based on your menu height */
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0.5rem 0;
   }
   
   nav li {
@@ -137,9 +182,18 @@ nav a:hover, nav a.active {
   }
   
   nav a {
-    padding: 0.5em;
-    text-align: center;
-    border-radius: 4px;
+    padding: 0.8em 1.2em;
+    border-radius: 0;
+  }
+  
+  nav a.active::after {
+    left: 10px;
+    transform: none;
+    bottom: auto;
+    top: 50%;
+    margin-top: -1.5px;
+    width: 4px;
+    height: 16px;
   }
 }
 

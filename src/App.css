@@ -4,10 +4,12 @@
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  max-width: 100%; /* Ensure it doesn't exceed viewport width */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  /* Add some scroll padding to account for sticky header */
-  scroll-padding-top: 130px;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-padding-top: var(--header-height);
+  background-color: var(--color-bg);
+  /* Ensure this doesn't interfere with sticky header */
+  position: relative;
 }
 
 /* Main content takes available space to push footer down */
@@ -16,47 +18,68 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0;
+  padding: 0.5rem 0 2rem;
   box-sizing: border-box;
+  /* Add padding equal to header height to push content down */
+  padding-top: var(--header-height);
+  /* Remove margin-top since we're using padding */
+  margin-top: 0;
 }
 
 /* Content wrapper centers and contains main content */
 .content-wrapper {
   width: 100%;
-  max-width: 1100px;
-  padding: 2rem;
+  max-width: var(--content-width);
+  padding: 1.5rem 2rem;
   box-sizing: border-box;
-  background: var(--color-bg-alt);
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
-  margin: 0 2rem;
-  /* Add a bit of top margin for better visual spacing with sticky header */
-  margin-top: 0.5rem;
+  margin: 0;
 }
 
-@media (max-width: 600px) {
+/* Card style updated */
+.card {
+  padding: 1.5rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin: 1.5rem 0;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .content-wrapper {
-    padding: 1rem;
-    margin: 0 1rem;
+    padding: 1.5rem;
   }
 }
 
-/* Adjust margins for very small screens */
-@media (max-width: 360px) {
-  .app-container {
-    padding: 0 !important;
-    margin: 0 !important;
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
+    margin: 1rem 0;
   }
   
   .main-content {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0.25rem 0 1.5rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .content-wrapper {
+    padding: 0.75rem;
   }
   
-  .content-wrapper {
-    margin: 0 !important;
-    padding: 0 !important; /* Keep minimal padding for content readability */
-    border-radius: 0 !important; /* Remove border radius on small screens */
+  .card {
+    padding: 1rem;
   }
 }
 
@@ -93,17 +116,51 @@
   padding: 2em;
   background: var(--color-bg);
   border-radius: var(--border-radius);
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.06);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    max-width: 90%;
   }
-  #root {
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .main-content {
+    padding: 0.5rem 0 2rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .app-container {
+    padding: 0 !important;
+  }
+  
+  .content-wrapper {
+    margin: 0 0.25rem;
     padding: 1rem;
-    width: 100%;
   }
 }
 
