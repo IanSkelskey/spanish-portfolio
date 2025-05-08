@@ -1,4 +1,5 @@
 import PageWrapper from '../components/PageWrapper';
+import BlockQuote from '../components/BlockQuote';
 import { useDataFetching } from '../services/dataService';
 import './Pages.css';
 import './Reflecciones.css';
@@ -11,11 +12,7 @@ function Reflecciones() {
 
   return (
     <PageWrapper title="Reflecciones finales">
-      <div className="reflection-quote">
-        <blockquote>
-          "{data.quote.text}"
-        </blockquote>
-      </div>
+      <BlockQuote text={data.quote.text} />
       
       {/* Map through reflection sections */}
       {data.sections.map((section, index) => (

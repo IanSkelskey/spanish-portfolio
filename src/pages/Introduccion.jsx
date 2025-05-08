@@ -1,5 +1,7 @@
 import PageWrapper from '../components/PageWrapper';
+import BlockQuote from '../components/BlockQuote';
 import { useDataFetching } from '../services/dataService';
+import './Pages.css';
 import './Introduccion.css';
 
 function Introduccion() {
@@ -30,12 +32,10 @@ function Introduccion() {
             </div>
             
             {/* Quote Section - Required */}
-            <div className="quote-section">
-                <blockquote>
-                    "{data.quote.text}"
-                    <cite>— {data.quote.author}</cite>
-                </blockquote>
-            </div>
+            <BlockQuote 
+              text={data.quote.text}
+              author={data.quote.author}
+            />
 
             <div className="profile-section">
                 <img

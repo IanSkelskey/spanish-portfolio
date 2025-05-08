@@ -1,0 +1,80 @@
+.block-quote {
+  background: linear-gradient(145deg, var(--color-argentina-dark-blue), #295888);
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius);
+  margin: 2.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.block-quote::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 8rem;
+  opacity: 0.1;
+  color: white;
+  font-family: 'Georgia', serif;
+  line-height: 1;
+}
+
+.block-quote::after {
+  content: '"';
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  font-size: 8rem;
+  opacity: 0.1;
+  color: white;
+  font-family: 'Georgia', serif;
+  line-height: 1;
+}
+
+.block-quote blockquote {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: 'Milonga', serif;
+  position: relative;
+  z-index: 1;
+}
+
+.block-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: white;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .block-quote {
+    padding: 2rem;
+  }
+  
+  .block-quote blockquote {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .block-quote {
+    padding: 1.5rem;
+  }
+  
+  .block-quote blockquote {
+    font-size: 1rem;
+  }
+  
+  .block-quote::before, 
+  .block-quote::after {
+    font-size: 6rem;
+  }
+}
