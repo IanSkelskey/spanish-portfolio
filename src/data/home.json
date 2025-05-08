@@ -1,0 +1,21 @@
+{
+  "heroImage": {
+    "src": "https://placehold.co/600x300?text=Portfolio+Hero+Image",
+    "alt": "Portfolio Hero"
+  },
+  "welcome": {
+    "title": "¡Hola y bienvenidos!",
+    "content": "Este portafolio documenta mi viaje aprendiendo español y explorando las culturas del mundo hispanohablante."
+  },
+  "sections": {
+    "title": "¿Qué encontrarás aquí?",
+    "items": [
+      "Mi introducción y motivación para aprender español",
+      "Mis objetivos de aprendizaje",
+      "Proyectos y asignaciones completados",
+      "Exploración de la cultura hispanohablante",
+      "Mis reflexiones sobre este viaje",
+      "Plan de acción para continuar mi aprendizaje"
+    ]
+  }
+}

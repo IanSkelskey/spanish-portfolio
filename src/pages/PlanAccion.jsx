@@ -1,56 +1,42 @@
 import PageWrapper from '../components/PageWrapper';
+import { useDataFetching } from '../services/dataService';
 import '../pages/Pages.css';
 
 function PlanAccion() {
+  const { data, loading, error } = useDataFetching('actionPlan');
+
+  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
+
   return (
     <PageWrapper title="Plan de acción">
       <div className="plan-intro">
         <img 
-          src="https://placehold.co/800x200?text=Plan+de+Acción" 
-          alt="Plan de acción" 
+          src={data.intro.image} 
+          alt={data.intro.alt} 
           className="plan-banner" 
         />
-        <p>
-          Mi estrategia para continuar desarrollando mis habilidades en español después de completar este curso.
-        </p>
+        <p>{data.intro.content}</p>
       </div>
       
       {/* Action Plan Reflection - Required */}
       <div className="plan-reflection card">
-        <h3>Reflexión sobre mis objetivos futuros</h3>
-        <p>
-          [Write your reflection about your new goals or goals from your Vision Board that you'd like to continue pursuing - minimum 100 words]
-        </p>
+        <h3>{data.reflection.title}</h3>
+        <p>{data.reflection.content}</p>
       </div>
       
-      <h3>Próximos pasos</h3>
+      <h3>{data.timeline.title}</h3>
       <div className="timeline">
-        <div className="timeline-item">
-          <h4>Corto plazo (3 meses)</h4>
-          <ul>
-            <li>Practicar español 30 minutos diarios</li>
-            <li>Completar un curso en línea de gramática avanzada</li>
-            <li>Leer un libro en español</li>
-          </ul>
-        </div>
-        
-        <div className="timeline-item">
-          <h4>Mediano plazo (1 año)</h4>
-          <ul>
-            <li>Participar en un intercambio lingüístico semanal</li>
-            <li>Ver una serie completa en español sin subtítulos</li>
-            <li>Escribir un blog semanal en español</li>
-          </ul>
-        </div>
-        
-        <div className="timeline-item">
-          <h4>Largo plazo (2+ años)</h4>
-          <ul>
-            <li>Viajar a un país hispanohablante</li>
-            <li>Obtener una certificación oficial de nivel B2/C1</li>
-            <li>Usar el español en un contexto profesional</li>
-          </ul>
-        </div>
+        {data.timeline.periods.map((period, index) => (
+          <div className="timeline-item" key={index}>
+            <h4>{period.title}</h4>
+            <ul>
+              {period.items.map((item, itemIndex) => (
+                <li key={itemIndex}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </PageWrapper>
   );

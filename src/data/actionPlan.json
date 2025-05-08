@@ -1,0 +1,40 @@
+{
+  "intro": {
+    "image": "https://placehold.co/800x200?text=Plan+de+Acción",
+    "alt": "Plan de acción",
+    "content": "Mi estrategia para continuar desarrollando mis habilidades en español después de completar este curso."
+  },
+  "reflection": {
+    "title": "Reflexión sobre mis objetivos futuros",
+    "content": "[Write your reflection about your new goals or goals from your Vision Board that you'd like to continue pursuing - minimum 100 words]"
+  },
+  "timeline": {
+    "title": "Próximos pasos",
+    "periods": [
+      {
+        "title": "Corto plazo (3 meses)",
+        "items": [
+          "Practicar español 30 minutos diarios",
+          "Completar un curso en línea de gramática avanzada",
+          "Leer un libro en español"
+        ]
+      },
+      {
+        "title": "Mediano plazo (1 año)",
+        "items": [
+          "Participar en un intercambio lingüístico semanal",
+          "Ver una serie completa en español sin subtítulos",
+          "Escribir un blog semanal en español"
+        ]
+      },
+      {
+        "title": "Largo plazo (2+ años)",
+        "items": [
+          "Viajar a un país hispanohablante",
+          "Obtener una certificación oficial de nivel B2/C1",
+          "Usar el español en un contexto profesional"
+        ]
+      }
+    ]
+  }
+}

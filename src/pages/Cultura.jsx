@@ -1,62 +1,41 @@
 import PageWrapper from '../components/PageWrapper';
+import { useDataFetching } from '../services/dataService';
 import '../pages/Pages.css';
 
 function Cultura() {
+  const { data, loading, error } = useDataFetching('culture');
+
+  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
+
   return (
     <PageWrapper title="Cultura">
       <div className="culture-header">
         <img 
-          src="https://placehold.co/800x300?text=Cultural+Exploration" 
-          alt="Exploración cultural" 
+          src={data.banner.image} 
+          alt={data.banner.alt} 
           className="culture-banner" 
         />
       </div>
       
       {/* Reflexión sobre la conciencia cultural - Requerido */}
       <div className="culture-reflection card">
-        <h3>Mi desarrollo de conciencia cultural</h3>
-        <p>
-          [Escribe aquí tu reflexión sobre lo que aprendiste acerca de la cultura hispana y cómo desarrollaste tu conciencia cultural durante esta clase. Esto debe estar en inglés y tener al menos 100 palabras.]
-        </p>
+        <h3>{data.reflection.title}</h3>
+        <p>{data.reflection.content}</p>
       </div>
       
-      <h3>Aspectos culturales explorados</h3>
+      <h3>{data.aspects.title}</h3>
       <div className="culture-grid">
-        <div className="culture-card">
-          <h4>Gastronomía</h4>
-          <img 
-            src="https://placehold.co/300x200?text=Gastronomía" 
-            alt="Gastronomía hispana" 
-          />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum 
-            a arcu cursus vitae congue mauris rhoncus.
-          </p>
-        </div>
-        
-        <div className="culture-card">
-          <h4>Música y baile</h4>
-          <img 
-            src="https://placehold.co/300x200?text=Música+y+Baile" 
-            alt="Música y baile" 
-          />
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-            doloremque laudantium, totam rem aperiam.
-          </p>
-        </div>
-        
-        <div className="culture-card">
-          <h4>Festividades</h4>
-          <img 
-            src="https://placehold.co/300x200?text=Festividades" 
-            alt="Festividades hispanas" 
-          />
-          <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
-            praesentium voluptatum deleniti atque.
-          </p>
-        </div>
+        {data.aspects.items.map((aspect, index) => (
+          <div className="culture-card" key={index}>
+            <h4>{aspect.title}</h4>
+            <img 
+              src={aspect.image} 
+              alt={aspect.title} 
+            />
+            <p>{aspect.description}</p>
+          </div>
+        ))}
       </div>
     </PageWrapper>
   );

@@ -1,0 +1,30 @@
+{
+  "banner": {
+    "image": "https://placehold.co/800x300?text=Cultural+Exploration",
+    "alt": "Exploración cultural"
+  },
+  "reflection": {
+    "title": "Mi desarrollo de conciencia cultural",
+    "content": "[Escribe aquí tu reflexión sobre lo que aprendiste acerca de la cultura hispana y cómo desarrollaste tu conciencia cultural durante esta clase. Esto debe estar en inglés y tener al menos 100 palabras.]"
+  },
+  "aspects": {
+    "title": "Aspectos culturales explorados",
+    "items": [
+      {
+        "title": "Gastronomía",
+        "image": "https://placehold.co/300x200?text=Gastronomía",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus."
+      },
+      {
+        "title": "Música y baile",
+        "image": "https://placehold.co/300x200?text=Música+y+Baile",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+      },
+      {
+        "title": "Festividades",
+        "image": "https://placehold.co/300x200?text=Festividades",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque."
+      }
+    ]
+  }
+}

@@ -1,47 +1,31 @@
 import PageWrapper from '../components/PageWrapper';
+import { useDataFetching } from '../services/dataService';
 import '../pages/Pages.css';
 
 function Reflecciones() {
+  const { data, loading, error } = useDataFetching('reflections');
+
+  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
+
   return (
     <PageWrapper title="Reflecciones finales">
       <div className="reflection-quote">
         <blockquote>
-          "El aprendizaje de un nuevo idioma abre puertas a nuevos mundos"
+          "{data.quote.text}"
         </blockquote>
       </div>
       
-      {/* Goals Achieved Section - Required */}
-      <div className="reflection-section">
-        <h3>Objetivos cumplidos</h3>
-        <p className="reflection-instruction">Revisit your Vision Board from the first week and reflect on which goals you've achieved and which ones you're still working towards.</p>
-        <div className="reflection-card">
-          <p>
-            [Write your reflection here about your achieved goals and progress - minimum 100 words]
-          </p>
+      {/* Map through reflection sections */}
+      {data.sections.map((section, index) => (
+        <div className="reflection-section" key={index}>
+          <h3>{section.title}</h3>
+          <p className="reflection-instruction">{section.instruction}</p>
+          <div className="reflection-card">
+            <p>{section.content}</p>
+          </div>
         </div>
-      </div>
-      
-      {/* Practical Use of Spanish - Required */}
-      <div className="reflection-section">
-        <h3>Uso del Español</h3>
-        <p className="reflection-instruction">Reflect on your experiences using Spanish in real life and how you plan to use it in the future.</p>
-        <div className="reflection-card">
-          <p>
-            [Write about your practical experiences using Spanish and future plans - minimum 100 words]
-          </p>
-        </div>
-      </div>
-      
-      {/* Learning Process Reflection - Required */}
-      <div className="reflection-section">
-        <h3>Mi proceso de aprendizaje</h3>
-        <p className="reflection-instruction">Compare your Spanish knowledge/skills from the beginning to the end of the course, and reflect on the learning process.</p>
-        <div className="reflection-card">
-          <p>
-            [Write about your learning process, what worked, what didn't, favorite assignments, etc. - minimum 100 words]
-          </p>
-        </div>
-      </div>
+      ))}
     </PageWrapper>
   );
 }

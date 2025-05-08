@@ -1,30 +1,32 @@
 import PageWrapper from '../components/PageWrapper';
+import { useDataFetching } from '../services/dataService';
 import '../pages/Pages.css';
 
 function Inicio() {
+  const { data, loading, error } = useDataFetching('home');
+
+  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
+
   return (
     <PageWrapper title="Bienvenidos a mi ePortfolio de Español">
       <div className="hero-section">
         <img 
-          src="https://placehold.co/600x300?text=Portfolio+Hero+Image" 
-          alt="Portfolio Hero" 
+          src={data.heroImage.src} 
+          alt={data.heroImage.alt} 
           className="hero-image" 
         />
       </div>
-      <h2>¡Hola y bienvenidos!</h2>
+      <h2>{data.welcome.title}</h2>
       <p>
-        Este portafolio documenta mi viaje aprendiendo español y explorando
-        las culturas del mundo hispanohablante.
+        {data.welcome.content}
       </p>
       <div className="card">
-        <h3>¿Qué encontrarás aquí?</h3>
+        <h3>{data.sections.title}</h3>
         <ul>
-          <li>Mi introducción y motivación para aprender español</li>
-          <li>Mis objetivos de aprendizaje</li>
-          <li>Proyectos y asignaciones completados</li>
-          <li>Exploración de la cultura hispanohablante</li>
-          <li>Mis reflexiones sobre este viaje</li>
-          <li>Plan de acción para continuar mi aprendizaje</li>
+          {data.sections.items.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </div>
     </PageWrapper>

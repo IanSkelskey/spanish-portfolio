@@ -1,0 +1,48 @@
+{
+  "priorKnowledge": {
+    "title": "Mi conocimiento de español antes de la clase",
+    "content": "[This section should describe your knowledge of Spanish language and culture before or at the beginning of this class. Write this in English as specified in the requirements.]"
+  },
+  "visionBoard": {
+    "title": "Mi Vision Board",
+    "image": "https://placehold.co/800x400?text=Vision+Board"
+  },
+  "shortTermGoals": {
+    "title": "Objetivos a corto plazo",
+    "goals": [
+      {
+        "category": "Vocabulario",
+        "description": "Aprender 500 nuevas palabras este semestre"
+      },
+      {
+        "category": "Gramática",
+        "description": "Dominar el presente del subjuntivo"
+      },
+      {
+        "category": "Conversación",
+        "description": "Mantener una conversación básica de 5 minutos"
+      }
+    ]
+  },
+  "longTermGoals": {
+    "title": "Objetivos a largo plazo",
+    "goals": [
+      {
+        "category": "Fluidez",
+        "description": "Alcanzar el nivel B2 según el Marco Común Europeo"
+      },
+      {
+        "category": "Cultural",
+        "description": "Visitar un país de habla hispana"
+      },
+      {
+        "category": "Profesional",
+        "description": "Usar español en un entorno laboral"
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "Mi inspiración",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus."
+  }
+}
