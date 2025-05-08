@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   
   // Add scroll event listener to enhance header on scroll
   useEffect(() => {
@@ -23,6 +24,24 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
+
+  // Set body overflow when menu opens (prevent scrolling)
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  // Handle menu state from NavBar
+  const handleMenuToggle = (isOpen) => {
+    setMenuOpen(isOpen);
+  };
   
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
@@ -33,9 +52,14 @@ function Header() {
           <h2 className="site-title">Español Portfolio</h2>
         </Link>
         
-        {/* Navigation */}
-        <NavBar />
+        {/* Navigation container for extensibility */}
+        <div className="nav-container">
+          <NavBar onMenuToggle={handleMenuToggle} />
+          {/* Space for future additions like language selector or theme toggle */}
+        </div>
       </div>
+      
+      {/* Menu overlay for mobile - removed as now handled within NavBar */}
     </header>
   );
 }
