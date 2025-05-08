@@ -1,0 +1,88 @@
+/* Cultura (Culture) page specific styles */
+
+.culture-header {
+  margin-bottom: 2rem;
+}
+
+.culture-banner {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition);
+}
+
+.culture-banner:hover {
+  transform: scale(1.01);
+}
+
+.culture-reflection {
+  margin-bottom: 2.5rem;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.culture-card {
+  background: var(--color-argentina-gray);
+  padding: 1.8rem;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--card-shadow);
+  border-top: 3px solid var(--color-accent);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.culture-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.culture-card img {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 1.2rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.culture-card h4 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-argentina-dark-blue);
+}
+
+.countries-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.country {
+  background: var(--color-argentina-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition);
+}
+
+.country:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .culture-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}

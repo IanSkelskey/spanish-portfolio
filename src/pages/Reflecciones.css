@@ -1,0 +1,79 @@
+/* Reflecciones (Reflections) page specific styles */
+
+.reflection-quote {
+  background: linear-gradient(135deg, #3b77b0, #295888);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  margin: 2.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.reflection-quote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 120px;
+  opacity: 0.1;
+  color: white;
+  font-family: 'Georgia', serif;
+}
+
+.reflection-quote blockquote {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: 'Archivo', sans-serif;
+}
+
+.reflection-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: white;
+}
+
+.reflection-section {
+  margin-bottom: 3rem;
+}
+
+.reflection-instruction {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1.2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent);
+}
+
+.reflection-card {
+  background: var(--color-argentina-gray);
+  padding: 1.8rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 768px) {
+  .reflection-quote {
+    padding: 2rem;
+  }
+  
+  .reflection-quote blockquote {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reflection-quote {
+    padding: 1.5rem;
+  }
+  
+  .reflection-quote blockquote {
+    font-size: 1rem;
+  }
+}

@@ -1,6 +1,7 @@
 import PageWrapper from '../components/PageWrapper';
 import { useDataFetching } from '../services/dataService';
-import '../pages/Pages.css';
+import './Pages.css';
+import './Inicio.css';
 
 function Inicio() {
   const { data, loading, error } = useDataFetching('home');
@@ -23,7 +24,7 @@ function Inicio() {
       </p>
       <div className="card">
         <h3>{data.sections.title}</h3>
-        <ul>
+        <ul className="sections-list">
           {data.sections.items.map((item, index) => (
             <li key={index}>{item}</li>
           ))}

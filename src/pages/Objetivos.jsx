@@ -1,6 +1,7 @@
 import PageWrapper from '../components/PageWrapper';
 import { useDataFetching } from '../services/dataService';
-import '../pages/Pages.css';
+import './Pages.css';
+import './Objetivos.css';
 
 function Objetivos() {
   const { data, loading, error } = useDataFetching('goals');

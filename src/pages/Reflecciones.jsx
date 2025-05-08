@@ -1,6 +1,7 @@
 import PageWrapper from '../components/PageWrapper';
 import { useDataFetching } from '../services/dataService';
-import '../pages/Pages.css';
+import './Pages.css';
+import './Reflecciones.css';
 
 function Reflecciones() {
   const { data, loading, error } = useDataFetching('reflections');

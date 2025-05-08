@@ -1,0 +1,68 @@
+/* PlanAccion (Action Plan) page specific styles */
+
+.plan-intro {
+  margin-bottom: 2.5rem;
+}
+
+.plan-banner {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition);
+}
+
+.plan-banner:hover {
+  transform: scale(1.01);
+}
+
+.plan-reflection {
+  margin-bottom: 2.5rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.timeline-item {
+  background: var(--color-argentina-gray);
+  padding: 1.8rem;
+  border-radius: var(--border-radius);
+  border-top: 4px solid var(--color-accent);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition);
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-item h4 {
+  margin-top: 0;
+  color: var(--color-argentina-dark-blue);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-item ul {
+  padding-left: 1.2rem;
+}
+
+.timeline-item li {
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    gap: 1.5rem;
+  }
+  
+  .timeline-item {
+    padding: 1.5rem;
+  }
+}
