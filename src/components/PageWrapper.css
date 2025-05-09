@@ -12,8 +12,81 @@
   box-sizing: border-box;
 }
 
-.page-wrapper h1 {
-  margin-bottom: 1rem;
+.page-title {
+  margin-top: 1rem; /* Added top margin for more space */
+  margin-bottom: 2.5rem; /* Increased from 1.5rem for more space below */
   text-align: center;
   width: 100%;
+  word-wrap: break-word; /* Ensures long titles don't overflow on mobile */
+  max-width: 100%;
+  /* Added hyphenation for better mobile text wrapping */
+  hyphens: auto;
+  position: relative; /* For the line below */
+}
+
+/* Add a decorative line after the title for visual separation */
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .page-content {
+    padding: 0;
+  }
+  
+  .page-title::after {
+    width: 70px;
+    bottom: -0.8rem;
+  }
+}
+
+/* Mobile phone responsiveness */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.3;
+    padding: 0 0.25rem;
+  }
+  
+  .page-content {
+    padding: 0;
+  }
+  
+  .page-title::after {
+    width: 60px;
+    height: 2px;
+    bottom: -0.7rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .page-title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  .page-title::after {
+    width: 50px;
+    bottom: -0.6rem;
+  }
 }

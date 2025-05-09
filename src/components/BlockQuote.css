@@ -56,25 +56,56 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .block-quote {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
   }
   
   .block-quote blockquote {
     font-size: 1.2rem;
   }
+  
+  .block-quote::before, 
+  .block-quote::after {
+    font-size: 7rem;
+  }
 }
 
 @media (max-width: 480px) {
   .block-quote {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
   }
   
   .block-quote blockquote {
     font-size: 1rem;
+    line-height: 1.4;
   }
   
-  .block-quote::before, 
+  .block-quote::before {
+    font-size: 5rem;
+    top: 5px;
+    left: 5px;
+  }
+  
   .block-quote::after {
-    font-size: 6rem;
+    font-size: 5rem;
+    bottom: -20px;
+    right: 15px;
+  }
+  
+  .block-quote cite {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .block-quote {
+    padding: 1.2rem 0.75rem;
+    margin: 0.75rem 0;
+  }
+  
+  .block-quote blockquote {
+    font-size: 0.95rem;
   }
 }

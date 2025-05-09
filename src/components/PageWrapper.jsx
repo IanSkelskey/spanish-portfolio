@@ -4,7 +4,7 @@ import './PageWrapper.css';
 function PageWrapper({ title, children }) {
   return (
     <div className="page-wrapper">
-      <h1>{title}</h1>
+      <h1 className="page-title">{title}</h1>
       <div className="page-content">
         {children}
       </div>

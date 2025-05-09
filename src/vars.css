@@ -26,6 +26,11 @@
   --content-width: 1200px;
   --header-height: 65px; /* Make sure this is defined correctly */
   --section-spacing: 2rem;
+  
+  /* Mobile optimized variables */
+  --mobile-section-spacing: 1.25rem;
+  --mobile-border-radius: 8px;
+  --mobile-header-height: 52px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,5 +45,14 @@
     --color-accent: #FFD166;
     --color-argentina-gray: #2c3446;
     --card-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  :root {
+    --section-spacing: var(--mobile-section-spacing);
+    --border-radius: var(--mobile-border-radius);
+    --header-height: var(--mobile-header-height);
   }
 }
