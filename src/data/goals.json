@@ -5,7 +5,7 @@
   },
   "visionBoard": {
     "title": "My Vision Board",
-    "image": "https://placehold.co/800x400?text=Vision+Board",
+    "image": "/assets/vision-board.png",
     "themes": [
       {
         "title": "Spanish Motivation",
