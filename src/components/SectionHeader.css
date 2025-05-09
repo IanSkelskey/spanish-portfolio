@@ -1,0 +1,83 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.7rem;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.section-icon {
+  font-size: 1.8rem;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-argentina-gray);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-style: italic;
+  margin-top: 0.25rem;
+  font-weight: normal;
+}
+
+.section-badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+  background: #FFC107;
+  color: rgba(0,0,0,0.7);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-icon {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-header::after {
+    width: 50px;
+    height: 2px;
+  }
+}

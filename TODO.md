@@ -18,34 +18,37 @@
 ### 2. **Mis Objetivos / Goals & Vision Board**
 
 - [ ] Brief description of Spanish knowledge before class
-- [ ] Original Vision Board from Module 1
+- [x] Original Vision Board from Module 1
 
 ### 3. **Asignaciones / Assignments + Reflections**
 
-Include at least **5–7 reflections**, covering **each of the four language skills**, with:
+Include at least **5-7 reflections**, covering **each of the four language skills**, with:
 
 - [x] At least 2 speaking artifacts (1 must be a video)
+  - [x] M3 - La Casa de Frida (Speaking - Video)
+  - [x] M7 - Los Bomberos (Speaking - Comic)
 - [ ] Listening sample
-- [ ] Reading sample
+- [x] Reading sample
+  - [x] M8 - Hispanic Literature 2: El almohadón de plumas
 - [ ] Writing sample
-- [ ] Artifacts uploaded (not just linked)
-- [ ] Reflections (min. 100 words each)
+- [ ] All artifacts uploaded (not just linked)
+- [ ] Reflections completed (min. 100 words each)
 
 📝 Assignment Sources:
 
-- [ ] Module 1: Greetings
+- [x] Module 1: Greetings
 - [ ] Module 2: Listening, Discussion (Redes Sociales), Reading (Tecnología)
-- [ ] Module 3: Partner Chat 1, La casa de Frida, Multimedia Poster
+- [x] Module 3: La casa de Frida
 - [ ] Module 4: Hispanic Literature 1
 - [ ] Module 5: Group or Individual Presentation
 - [ ] Module 6: Partner Chat 2, Video (Medio Ambiente), Blog (Naturaleza)
-- [ ] Module 7: Listening Videos, Hispanic Cities Discussion, Bomberos Comic
-- [ ] Module 8: Hispanic Literature 2
+- [x] Module 7: Los Bomberos Comic
+- [x] Module 8: Hispanic Literature 2 (El almohadón de plumas)
 
-### 4. **Cultura / Culture**
+### 4. **Cultura / Hispanic Culture**
 
-- [ ] At least one assignment reflecting Hispanic cultural knowledge
-- [ ] Reflection on cultural awareness
+- [x] At least one assignment reflecting Hispanic cultural knowledge
+- [ ] Reflection on cultural awareness development
 
 ### 5. **Reflecciones Finales / Final Reflections**
 
@@ -59,7 +62,16 @@ Include at least **5–7 reflections**, covering **each of the four language ski
 
 ## ✍️ Reflections Summary
 
-- [ ] Minimum of **9 total reflections**
+- [ ] Minimum of **9 total reflections** (currently have: 4)
+  - [x] Greetings reflection
+  - [x] Vision Board reflection
+  - [x] La Casa de Frida reflection
+  - [x] Los Bomberos reflection
+  - [ ] El almohadón de plumas reflection
+  - [ ] Cultural awareness reflection
+  - [ ] Goals revisited reflection
+  - [ ] Spanish usage reflection
+  - [ ] Learning process reflection
 - [ ] Each reflection is **at least 100 words**
 - [ ] Each includes:
 	- [ ] Critical thinking
@@ -73,7 +85,7 @@ Include at least **5–7 reflections**, covering **each of the four language ski
 - [ ] 🎨 Clean, creative, and professional design
 - [ ] 📄 Reflections complete and meet all criteria
 - [ ] 📷 Artifacts are uploaded, not just linked
-- [ ] 🔗 All links and pages are accessible without login
+- [ ] 🔗 All links and pages are accessible without login (test in incognito/private window)
 - [ ] 🧪 Peer-reviewed and proofread before submission
 
 ## 📅 Deadlines

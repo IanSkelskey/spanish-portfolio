@@ -1,0 +1,83 @@
+.content-card {
+  background: var(--color-argentina-gray);
+  padding: 1.8rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--color-accent);
+}
+
+.content-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.content-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.content-card-icon {
+  font-size: 1.8rem;
+  margin-right: 0.75rem;
+}
+
+.content-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color-argentina-dark-blue);
+  flex: 1;
+}
+
+.content-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accent position variants */
+.content-card[style*="border-left-color"] {
+  border-top: none;
+  border-left: 4px solid var(--color-accent);
+}
+
+.content-card[style*="border-right-color"] {
+  border-top: none;
+  border-right: 4px solid var(--color-accent);
+}
+
+.content-card[style*="border-bottom-color"] {
+  border-top: none;
+  border-bottom: 4px solid var(--color-accent);
+}
+
+/* Keep compatibility with .card class */
+.content-card.card {
+  border-left: 4px solid var(--color-accent);
+  border-top: none;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .content-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-card {
+    padding: 1.25rem;
+  }
+  
+  .content-card-icon {
+    font-size: 1.5rem;
+  }
+  
+  .content-card-title {
+    font-size: 1.1rem;
+  }
+}

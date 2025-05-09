@@ -1,13 +1,14 @@
-import PageWrapper from '../components/PageWrapper';
 import { useDataFetching } from '../services/dataService';
+import PageLoader from '../components/PageLoader';
+import PageBanner from '../components/PageBanner';
+import ContentCard from '../components/ContentCard';
+import SectionHeader from '../components/SectionHeader';
+import CustomList from '../components/CustomList';
 import './Pages.css';
 import './PlanAccion.css';
 
 function ActionPlan() {
   const { data, loading, error } = useDataFetching('actionPlan');
-
-  if (loading) return <PageWrapper title="Loading..."><p>Loading content...</p></PageWrapper>;
-  if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
 
   const getTimelineIcon = (title) => {
     if (title.includes("Corto") || title.includes("Short")) return "🔜";
@@ -24,91 +25,101 @@ function ActionPlan() {
   };
 
   return (
-    <PageWrapper title="Action Plan / Plan de Acción">
-      <div className="plan-intro">
-        <img 
-          src={data.intro.image} 
-          alt={data.intro.alt} 
-          className="plan-banner" 
-        />
-        <p className="plan-intro-text">{data.intro.content}</p>
-      </div>
-      
-      {/* Action Plan Reflection - Required */}
-      <div className="plan-reflection card">
-        <h3>Reflection on My Future Goals</h3>
-        <p>{data.reflection.content}</p>
-      </div>
-      
-      {/* Visual Timeline Implementation */}
-      <h3 className="timeline-title">
-        <span className="timeline-icon">📋</span>
-        Next Steps / Próximos Pasos
-      </h3>
-      
-      <div className="timeline-container">
-        <div className="timeline-line"></div>
-        
-        {data.timeline.periods.map((period, index) => (
-          <div className={`timeline-item period-${index}`} key={index}>
-            <div className="timeline-marker">
-              <span className="timeline-period-icon">{getTimelineIcon(period.title)}</span>
-            </div>
+    <PageLoader loading={loading} error={error} title="Action Plan / Plan de Acción">
+      {data && (
+        <>
+          <PageBanner 
+            src={data.intro.image} 
+            alt={data.intro.alt}
+          />
+          <p className="plan-intro-text">{data.intro.content}</p>
+          
+          {/* Action Plan Reflection - Required */}
+          <ContentCard className="plan-reflection card">
+            <h3>Reflection on My Future Goals</h3>
+            <p>{data.reflection.content}</p>
+          </ContentCard>
+          
+          {/* Visual Timeline Implementation */}
+          <SectionHeader 
+            icon="📋" 
+            title="Next Steps / Próximos Pasos"
+          />
+          
+          <div className="timeline-container">
+            <div className="timeline-line"></div>
             
-            <div className="timeline-content">
-              <h4>
-                <span className="timeline-period-title">{translateTitle(period.title)}</span>
-                <span className="timeline-period-original">{period.title}</span>
-              </h4>
-              
-              <ul className="timeline-list">
-                {period.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>
-                    <span className="timeline-task">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      {/* Language Learning Resources Section */}
-      <div className="resources-section">
-        <h3>Helpful Resources</h3>
-        <div className="resources-grid">
-          <div className="resource-card">
-            <div className="resource-icon">🎧</div>
-            <h4>Listening Practice</h4>
-            <ul>
-              <li>Spanish podcasts (Radio Ambulante, Coffee Break Spanish)</li>
-              <li>Argentine TV series with subtitles</li>
-              <li>YouTube channels for Spanish learners</li>
-            </ul>
+            {data.timeline.periods.map((period, index) => (
+              <div className={`timeline-item period-${index}`} key={index}>
+                <div className="timeline-marker">
+                  <span className="timeline-period-icon">{getTimelineIcon(period.title)}</span>
+                </div>
+                
+                <ContentCard className="timeline-content">
+                  <h4>
+                    <span className="timeline-period-title">{translateTitle(period.title)}</span>
+                    <span className="timeline-period-original">{period.title}</span>
+                  </h4>
+                  
+                  <CustomList 
+                    items={period.items.map(item => (
+                      <span className="timeline-task">{item}</span>
+                    ))} 
+                    className="timeline-list"
+                  />
+                </ContentCard>
+              </div>
+            ))}
           </div>
           
-          <div className="resource-card">
-            <div className="resource-icon">📱</div>
-            <h4>Learning Apps</h4>
-            <ul>
-              <li>Duolingo for daily practice</li>
-              <li>Anki for vocabulary flashcards</li>
-              <li>HelloTalk for language exchange</li>
-            </ul>
+          {/* Language Learning Resources Section */}
+          <SectionHeader title="Helpful Resources" />
+          <div className="resources-grid">
+            <ContentCard 
+              icon="🎧"
+              title="Listening Practice" 
+              className="resource-card"
+            >
+              <CustomList 
+                items={[
+                  "Spanish podcasts (Radio Ambulante, Coffee Break Spanish)",
+                  "Argentine TV series with subtitles",
+                  "YouTube channels for Spanish learners"
+                ]}
+              />
+            </ContentCard>
+            
+            <ContentCard
+              icon="📱"
+              title="Learning Apps"
+              className="resource-card"
+            >
+              <CustomList
+                items={[
+                  "Duolingo for daily practice",
+                  "Anki for vocabulary flashcards",
+                  "HelloTalk for language exchange"
+                ]}
+              />
+            </ContentCard>
+            
+            <ContentCard
+              icon="📚"
+              title="Reading Materials"
+              className="resource-card"
+            >
+              <CustomList
+                items={[
+                  "Graded readers for beginners and intermediates",
+                  "Spanish news websites (simplified)",
+                  "Argentine authors (short stories)"
+                ]}
+              />
+            </ContentCard>
           </div>
-          
-          <div className="resource-card">
-            <div className="resource-icon">📚</div>
-            <h4>Reading Materials</h4>
-            <ul>
-              <li>Graded readers for beginners and intermediates</li>
-              <li>Spanish news websites (simplified)</li>
-              <li>Argentine authors (short stories)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </PageWrapper>
+        </>
+      )}
+    </PageLoader>
   );
 }
 

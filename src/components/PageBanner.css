@@ -1,0 +1,39 @@
+.page-banner {
+  margin-bottom: 2rem;
+}
+
+.page-banner-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition);
+}
+
+.page-banner-image:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    margin-bottom: 1.5rem;
+  }
+  
+  .page-banner-image {
+    max-height: 250px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-banner {
+    margin-bottom: 1rem;
+  }
+  
+  .page-banner-image {
+    max-height: 180px;
+    margin-bottom: 0.75rem;
+  }
+}

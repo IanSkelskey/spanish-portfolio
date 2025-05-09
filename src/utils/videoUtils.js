@@ -1,35 +1,33 @@
 /**
  * Extracts YouTube video ID from various YouTube URL formats
- * @param {string} url - The YouTube URL
- * @returns {string|null} - The YouTube video ID or null if not a valid YouTube URL
+ * @param {string} url - YouTube URL
+ * @returns {string|null} YouTube video ID or null if not found
  */
 export function extractYouTubeId(url) {
-  if (!url || typeof url !== 'string') return null;
+  if (!url) return null;
   
-  // Match patterns like:
-  // - https://www.youtube.com/watch?v=VIDEO_ID
-  // - https://youtu.be/VIDEO_ID
-  // - https://youtube.com/shorts/VIDEO_ID
-  const regExp = /^.*(?:(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|shorts\/|watch\?v=))|(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|shorts\/|watch\?.*v=)))([^#\&\?]*).*/;
+  // Handle various YouTube URL formats
+  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
   const match = url.match(regExp);
   
-  return (match && match[1].length === 11) ? match[1] : null;
+  return (match && match[7].length === 11) ? match[7] : null;
 }
 
 /**
- * Creates a YouTube embed URL from a video ID
- * @param {string} videoId - The YouTube video ID
- * @returns {string} - The YouTube embed URL
+ * Creates an embed URL for a YouTube video
+ * @param {string} videoId - YouTube video ID
+ * @returns {string} YouTube embed URL
  */
 export function createYouTubeEmbedUrl(videoId) {
   return `https://www.youtube.com/embed/${videoId}`;
 }
 
 /**
- * Checks if a URL is a YouTube URL
- * @param {string} url - The URL to check
- * @returns {boolean} - True if the URL is a YouTube URL
+ * Checks if a URL is a valid YouTube URL
+ * @param {string} url - URL to check
+ * @returns {boolean} True if URL is a YouTube URL
  */
 export function isYouTubeUrl(url) {
-  return !!extractYouTubeId(url);
+  if (!url) return false;
+  return url.includes('youtube.com') || url.includes('youtu.be');
 }

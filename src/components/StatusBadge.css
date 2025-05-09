@@ -1,0 +1,35 @@
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.status-badge.complete {
+  background: #4CAF50;
+  color: white;
+}
+
+.status-badge.incomplete {
+  background: #FFC107;
+  color: rgba(0,0,0,0.7);
+}
+
+.status-badge.warning {
+  background: #FF9800;
+  color: white;
+}
+
+.status-badge.info {
+  background: var(--color-argentina-blue);
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
