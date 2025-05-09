@@ -4,10 +4,10 @@ import { extractYouTubeId, createYouTubeEmbedUrl, isYouTubeUrl } from '../utils/
 import './Pages.css';
 import './Asignaciones.css';
 
-function Asignaciones() {
+function Assignments() {
   const { data, loading, error } = useDataFetching('assignments');
 
-  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (loading) return <PageWrapper title="Loading..."><p>Loading content...</p></PageWrapper>;
   if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
 
   /**
@@ -53,7 +53,7 @@ function Asignaciones() {
   };
 
   return (
-    <PageWrapper title="Asignaciones / Proyectos">
+    <PageWrapper title="Assignments / Projects">
       <div className="assignments-intro">
         <h2>{data.intro.title}</h2>
         <p>{data.intro.description}</p>
@@ -77,7 +77,7 @@ function Asignaciones() {
                 
                 {project.link && !project.isVideo && (
                   <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    Ver proyecto
+                    View Project
                   </a>
                 )}
               </div>
@@ -89,7 +89,7 @@ function Asignaciones() {
       {/* Additional Projects - To meet 5-7 requirement */}
       {data.additionalProjects && data.additionalProjects.length > 0 && (
         <div className="skill-section">
-          <h3>Proyectos adicionales</h3>
+          <h3>Additional Projects</h3>
           <div className="projects-grid">
             {data.additionalProjects.map((project, index) => (
               <div className="project-card" key={index}>
@@ -104,7 +104,7 @@ function Asignaciones() {
                 
                 {project.link && !project.isVideo && (
                   <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    Ver proyecto
+                    View Project
                   </a>
                 )}
               </div>
@@ -116,4 +116,4 @@ function Asignaciones() {
   );
 }
 
-export default Asignaciones;
+export default Assignments;

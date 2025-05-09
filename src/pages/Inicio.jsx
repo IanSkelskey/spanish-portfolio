@@ -12,14 +12,14 @@ function resolveImageSrc(src) {
   return src;
 }
 
-function Inicio() {
+function Home() {
   const { data, loading, error } = useDataFetching('home');
 
-  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (loading) return <PageWrapper title="Loading..."><p>Loading content...</p></PageWrapper>;
   if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
 
   return (
-    <PageWrapper title="Bienvenidos a mi ePortfolio de Español">
+    <PageWrapper title="Welcome to my Spanish ePortfolio">
       <div className="hero-section">
         <img 
           src={resolveImageSrc(data.heroImage.src)} 
@@ -43,4 +43,4 @@ function Inicio() {
   );
 }
 
-export default Inicio;
+export default Home;

@@ -4,45 +4,45 @@
     "content": "Before starting this class, I had basic familiarity with Spanish pronunciation and a few commonly used phrases. I understood some grammar rules but struggled to apply them in conversation. I had taken Spanish previously but lacked confidence in speaking and listening."
   },
   "visionBoard": {
-    "title": "Mi Vision Board",
+    "title": "My Vision Board",
     "image": "https://placehold.co/800x400?text=Vision+Board"
   },
   "shortTermGoals": {
-    "title": "Objetivos a corto plazo",
+    "title": "Short-term Goals",
     "goals": [
       {
-        "category": "Vocabulario",
-        "description": "Aprender 500 nuevas palabras este semestre"
+        "category": "Vocabulary",
+        "description": "Learn 500 new words this semester"
       },
       {
-        "category": "Gramática",
-        "description": "Dominar el presente del subjuntivo"
+        "category": "Grammar",
+        "description": "Master the present subjunctive"
       },
       {
-        "category": "Conversación",
-        "description": "Mantener una conversación básica de 5 minutos"
+        "category": "Conversation",
+        "description": "Maintain a basic 5-minute conversation"
       }
     ]
   },
   "longTermGoals": {
-    "title": "Objetivos a largo plazo",
+    "title": "Long-term Goals",
     "goals": [
       {
-        "category": "Fluidez",
-        "description": "Alcanzar el nivel B2 según el Marco Común Europeo"
+        "category": "Fluency",
+        "description": "Reach B2 level according to the Common European Framework"
       },
       {
         "category": "Cultural",
-        "description": "Visitar un país de habla hispana"
+        "description": "Visit a Spanish-speaking country"
       },
       {
-        "category": "Profesional",
-        "description": "Usar español en un entorno laboral"
+        "category": "Professional",
+        "description": "Use Spanish in a work environment"
       }
     ]
   },
   "inspiration": {
-    "title": "Mi inspiración",
+    "title": "My Inspiration",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus."
   }
 }

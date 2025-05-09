@@ -5,13 +5,13 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 // Import page components
-import Inicio from './pages/Inicio';
+import Home from './pages/Inicio';
 import Introduccion from './pages/Introduccion';
-import Objetivos from './pages/Objetivos';
-import Asignaciones from './pages/Asignaciones';
-import Cultura from './pages/Cultura';
-import Reflecciones from './pages/Reflecciones';
-import PlanAccion from './pages/PlanAccion';
+import Goals from './pages/Objetivos';
+import Assignments from './pages/Asignaciones';
+import Culture from './pages/Cultura';
+import Reflections from './pages/Reflecciones';
+import ActionPlan from './pages/PlanAccion';
 
 function App() {
   return (
@@ -21,13 +21,13 @@ function App() {
         <main className="main-content">
           <div className="content-wrapper">
             <Routes>
-              <Route path="/" element={<Inicio />} />
+              <Route path="/" element={<Home />} />
               <Route path="/introduccion" element={<Introduccion />} />
-              <Route path="/objetivos" element={<Objetivos />} />
-              <Route path="/asignaciones" element={<Asignaciones />} />
-              <Route path="/cultura" element={<Cultura />} />
-              <Route path="/reflecciones" element={<Reflecciones />} />
-              <Route path="/plan-accion" element={<PlanAccion />} />
+              <Route path="/objetivos" element={<Goals />} />
+              <Route path="/asignaciones" element={<Assignments />} />
+              <Route path="/cultura" element={<Culture />} />
+              <Route path="/reflecciones" element={<Reflections />} />
+              <Route path="/plan-accion" element={<ActionPlan />} />
             </Routes>
           </div>
         </main>

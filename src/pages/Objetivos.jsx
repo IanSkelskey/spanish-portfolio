@@ -3,14 +3,14 @@ import { useDataFetching } from '../services/dataService';
 import './Pages.css';
 import './Objetivos.css';
 
-function Objetivos() {
+function Goals() {
   const { data, loading, error } = useDataFetching('goals');
 
-  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (loading) return <PageWrapper title="Loading..."><p>Loading content...</p></PageWrapper>;
   if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
 
   return (
-    <PageWrapper title="Mis objetivos / Vision Board">
+    <PageWrapper title="My Goals / Vision Board">
       {/* Prior Knowledge Section - Required */}
       <div className="prior-knowledge card">
         <h3>{data.priorKnowledge.title}</h3>
@@ -26,7 +26,7 @@ function Objetivos() {
         />
       </div>
       
-      <h3>{data.shortTermGoals.title}</h3>
+      <h3>Short-term Goals</h3>
       <ul className="goals-list">
         {data.shortTermGoals.goals.map((goal, index) => (
           <li key={index}>
@@ -35,7 +35,7 @@ function Objetivos() {
         ))}
       </ul>
       
-      <h3>{data.longTermGoals.title}</h3>
+      <h3>Long-term Goals</h3>
       <ul className="goals-list">
         {data.longTermGoals.goals.map((goal, index) => (
           <li key={index}>
@@ -52,4 +52,4 @@ function Objetivos() {
   );
 }
 
-export default Objetivos;
+export default Goals;

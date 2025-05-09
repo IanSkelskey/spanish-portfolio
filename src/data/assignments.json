@@ -1,14 +1,14 @@
 {
   "intro": {
-    "title": "Mi progreso en las cuatro habilidades",
-    "description": "Esta sección contiene ejemplos de mi trabajo que demuestran mi crecimiento en las cuatro habilidades del idioma español."
+    "title": "My progress in the four language skills",
+    "description": "This section contains examples of my work that demonstrate my growth in the four Spanish language skills."
   },
   "skills": [
     {
-      "name": "Comprensión auditiva (Listening)",
+      "name": "Listening Comprehension",
       "projects": [
         {
-          "title": "Proyecto de comprensión auditiva",
+          "title": "Listening Project",
           "image": "https://placehold.co/300x200?text=Listening",
           "reflection": "[Write your reflection here in English - min 100 words]",
           "link": "#"
@@ -16,10 +16,10 @@
       ]
     },
     {
-      "name": "Comprensión de lectura (Reading)",
+      "name": "Reading Comprehension",
       "projects": [
         {
-          "title": "Proyecto de lectura",
+          "title": "Reading Project",
           "image": "https://placehold.co/300x200?text=Reading",
           "reflection": "[Write your reflection here in English - min 100 words]",
           "link": "#"
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "name": "Expresión oral (Speaking)",
+      "name": "Speaking",
       "projects": [
         {
           "title": "La Casa de Frida",
@@ -36,7 +36,7 @@
           "link": "https://youtu.be/a8oUzUjKYEs"
         },
         {
-          "title": "Presentación oral 2",
+          "title": "Oral Presentation 2",
           "image": "https://placehold.co/300x200?text=Speaking+Assignment",
           "reflection": "[Write your reflection here in English - min 100 words]",
           "link": "#"
@@ -44,10 +44,10 @@
       ]
     },
     {
-      "name": "Expresión escrita (Writing)",
+      "name": "Writing",
       "projects": [
         {
-          "title": "Proyecto de escritura",
+          "title": "Writing Project",
           "image": "https://placehold.co/300x200?text=Writing",
           "reflection": "[Write your reflection here in English - min 100 words]",
           "link": "#"

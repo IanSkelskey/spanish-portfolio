@@ -3,14 +3,14 @@ import { useDataFetching } from '../services/dataService';
 import './Pages.css';
 import './Cultura.css';
 
-function Cultura() {
+function Culture() {
   const { data, loading, error } = useDataFetching('culture');
 
-  if (loading) return <PageWrapper title="Cargando..."><p>Cargando contenido...</p></PageWrapper>;
+  if (loading) return <PageWrapper title="Loading..."><p>Loading content...</p></PageWrapper>;
   if (error) return <PageWrapper title="Error"><p>{error}</p></PageWrapper>;
 
   return (
-    <PageWrapper title="Cultura">
+    <PageWrapper title="Hispanic Culture">
       <div className="culture-header">
         <img 
           src={data.banner.image} 
@@ -19,13 +19,13 @@ function Cultura() {
         />
       </div>
       
-      {/* Reflexión sobre la conciencia cultural - Requerido */}
+      {/* Cultural awareness reflection - Required */}
       <div className="culture-reflection card">
-        <h3>{data.reflection.title}</h3>
+        <h3>My Cultural Awareness Development</h3>
         <p>{data.reflection.content}</p>
       </div>
       
-      <h3>{data.aspects.title}</h3>
+      <h3>Cultural Aspects Explored</h3>
       <div className="culture-grid">
         {data.aspects.items.map((aspect, index) => (
           <div className="culture-card" key={index}>
@@ -42,4 +42,4 @@ function Cultura() {
   );
 }
 
-export default Cultura;
+export default Culture;

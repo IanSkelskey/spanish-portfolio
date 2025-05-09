@@ -5,34 +5,34 @@
     "content": "Mi estrategia para continuar desarrollando mis habilidades en español después de completar este curso."
   },
   "reflection": {
-    "title": "Reflexión sobre mis objetivos futuros",
+    "title": "Reflection on my future goals",
     "content": "[Write your reflection about your new goals or goals from your Vision Board that you'd like to continue pursuing - minimum 100 words]"
   },
   "timeline": {
-    "title": "Próximos pasos",
+    "title": "Next steps",
     "periods": [
       {
-        "title": "Corto plazo (3 meses)",
+        "title": "Short-term (3 months)",
         "items": [
-          "Practicar español 30 minutos diarios",
-          "Completar un curso en línea de gramática avanzada",
-          "Leer un libro en español"
+          "Practice Spanish for 30 minutes daily",
+          "Complete an online advanced grammar course",
+          "Read a book in Spanish"
         ]
       },
       {
-        "title": "Mediano plazo (1 año)",
+        "title": "Medium-term (1 year)",
         "items": [
-          "Participar en un intercambio lingüístico semanal",
-          "Ver una serie completa en español sin subtítulos",
-          "Escribir un blog semanal en español"
+          "Participate in weekly language exchanges",
+          "Watch a complete series in Spanish without subtitles",
+          "Write a weekly blog in Spanish"
         ]
       },
       {
-        "title": "Largo plazo (2+ años)",
+        "title": "Long-term (2+ years)",
         "items": [
-          "Viajar a un país hispanohablante",
-          "Obtener una certificación oficial de nivel B2/C1",
-          "Usar el español en un contexto profesional"
+          "Travel to a Spanish-speaking country",
+          "Obtain an official B2/C1 level certification",
+          "Use Spanish in a professional context"
         ]
       }
     ]

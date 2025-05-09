@@ -3,13 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 import './NavBar.css';
 
 const navLinks = [
-  { to: '/', label: 'Inicio', end: true },
-  { to: '/introduccion', label: 'Introducción' },
-  { to: '/objetivos', label: 'Mis objetivos' },
-  { to: '/asignaciones', label: 'Asignaciones' },
-  { to: '/cultura', label: 'Cultura' },
-  { to: '/reflecciones', label: 'Reflecciones' },
-  { to: '/plan-accion', label: 'Plan de acción' },
+  { to: '/', label: 'Home', end: true },
+  { to: '/introduccion', label: 'Introduction' },
+  { to: '/objetivos', label: 'Goals' },
+  { to: '/asignaciones', label: 'Assignments' },
+  { to: '/cultura', label: 'Culture' },
+  { to: '/reflecciones', label: 'Reflections' },
+  { to: '/plan-accion', label: 'Action Plan' },
 ];
 
 function NavBar({ onMenuToggle }) {

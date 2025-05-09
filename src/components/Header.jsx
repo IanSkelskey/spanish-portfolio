@@ -49,7 +49,7 @@ function Header() {
         {/* Site logo/title */}
         <Link to="/" className="site-logo">
           <img src="/spanish-portfolio/logo.svg" alt="Portfolio logo" />
-          <h2 className="site-title">Español Portfolio</h2>
+          <h2 className="site-title">Spanish Portfolio</h2>
         </Link>
         
         {/* Navigation container for extensibility */}
