@@ -1,6 +1,6 @@
 {
   "heroImage": {
-    "src": "https://placehold.co/600x300?text=Portfolio+Hero+Image",
+    "src": "/src/assets/landscape.png",
     "alt": "Portfolio Hero"
   },
   "welcome": {
