@@ -6,33 +6,39 @@
   },
   "reflection": {
     "title": "Reflection on my future goals",
-    "content": "[Write your reflection about your new goals or goals from your Vision Board that you'd like to continue pursuing - minimum 100 words]"
+    "content": "Completing this Spanish course has been just the beginning of my language journey rather than the destination. The feedback I received on assignments like La Casa de Frida (M3) highlighted specific areas for improvement, particularly pronunciation of sounds like T, TR, and R, while my work on literary analysis (M8) showed my capacity to engage with complex Spanish texts given sufficient time and resources. Looking ahead, I want to build on this foundation with a structured approach that addresses these specific challenges while pushing my abilities forward. My primary goal continues to be achieving meaningful connection with my wife's Argentine family. While I've made progress in basic conversations, I still struggle with their rapid speech patterns and regional expressions specific to Rioplatense Spanish. To address this, I plan to immerse myself in Argentine media and practice the distinctive pronunciation and vocabulary used in Buenos Aires. Beyond family communication, I'm setting professional goals for my Spanish skills aligned with my software engineering career. I recognize the growing importance of multilingual capabilities in developing globally accessible applications, and aim to eventually contribute to Spanish language localization projects. The cognitive benefits mentioned in my vision board remain important to me—I've already noticed improvements in my attention span and problem-solving abilities as I've practiced Spanish regularly. The disciplined approach I've developed while learning Spanish has already begun to transfer to other areas of my life, just as I anticipated in my initial goals. Moving forward, I'm committed to integrating Spanish practice into my daily routine through specific short, medium, and long-term activities."
   },
   "timeline": {
     "title": "Next steps",
     "periods": [
       {
-        "title": "Short-term (3 months)",
+        "title": "Corto plazo (3 meses)",
         "items": [
-          "Practice Spanish for 30 minutes daily",
-          "Complete an online advanced grammar course",
-          "Read a book in Spanish"
+          "Practice Spanish for 30 minutes daily using structured apps like Duolingo and Babbel",
+          "Complete an online course focusing on T, TR, and R pronunciation (based on feedback from La Casa de Frida)",
+          "Read a novel by an Argentine author with a reading guide for support",
+          "Create a personal vocabulary system focusing on Argentine expressions",
+          "Schedule monthly video calls with my wife's family in Spanish"
         ]
       },
       {
-        "title": "Medium-term (1 year)",
+        "title": "Mediano plazo (1 año)",
         "items": [
-          "Participate in weekly language exchanges",
-          "Watch a complete series in Spanish without subtitles",
-          "Write a weekly blog in Spanish"
+          "Participate in weekly language exchanges with native speakers, particularly Argentines",
+          "Watch Argentine series like 'El Marginal' without subtitles",
+          "Write a weekly blog in Spanish about technology and software development",
+          "Take an intermediate conversation course focused on fluency and Argentine dialect",
+          "Start contributing to open-source software projects with Spanish documentation"
         ]
       },
       {
-        "title": "Long-term (2+ years)",
+        "title": "Largo plazo (2+ años)",
         "items": [
-          "Travel to a Spanish-speaking country",
-          "Obtain an official B2/C1 level certification",
-          "Use Spanish in a professional context"
+          "Travel to Argentina to spend time with my wife's family and immerse in the language",
+          "Obtain an official B2/C1 level certification through DELE exam",
+          "Lead a software localization project for Spanish-speaking markets",
+          "Volunteer as a translator for community organizations in Connecticut",
+          "Develop a language exchange program at my workplace"
         ]
       }
     ]

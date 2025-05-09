@@ -5,25 +5,25 @@
   },
   "reflection": {
     "title": "My Cultural Awareness Development",
-    "content": "[Write your reflection here about what you learned about Hispanic culture and how you developed your cultural awareness during this class. This should be in English and at least 100 words.]"
+    "content": "Before taking this Spanish course, my understanding of Hispanic cultures was limited to stereotypical representations in mainstream media and occasional interactions with my Argentine wife's family. This class has expanded my cultural horizons, particularly through assignments like the La Casa de Frida video project and the analysis of 'El almohadón de plumas' by Horacio Quiroga. As I noted in my vision board, language learning enables genuine relationships and encourages empathy for different lived experiences – this has proven true as my growing Spanish skills have deepened my connection to my wife's cultural heritage. The La Casa de Frida project taught me how personal spaces reflect cultural identity and artistic expression, revealing the importance of architecture in preserving and expressing cultural values. Learning about Quiroga's life between Uruguay and Argentina helped me appreciate the complex literary traditions of the Río de la Plata region, showing me how literature reflects historical and social contexts. Through these specific assignments, I've developed a more nuanced understanding of the diversity within Hispanic cultures and gained appreciation for their artistic and literary expressions. This increased cultural awareness has made me more sensitive to cultural differences and more curious about authentic cultural experiences beyond surface-level tourism or cuisine – exactly the type of engagement with a 'larger human dialogue' that I hoped for when starting this course."
   },
   "aspects": {
     "title": "Cultural Aspects Explored",
     "items": [
       {
-        "title": "Gastronomy",
-        "image": "https://placehold.co/300x200?text=Gastronomy",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus."
+        "title": "Literature of the Río de la Plata",
+        "image": "https://placehold.co/300x200?text=Hispanic+Literature",
+        "description": "Through the Hispanic Literature 2 assignment analyzing 'El almohadón de plumas,' I gained insight into the literary traditions of the Río de la Plata region. While Quiroga was Uruguayan, he spent much of his career in Argentina, and his work reflects the gothic and psychological horror traditions that influenced early 20th century literature in this region. The story's themes of isolation, silent suffering, and the hidden horrors of domestic life reveal cultural and social perspectives of the time. This assignment opened my eyes to how literature serves as both artistic expression and cultural documentation."
       },
       {
-        "title": "Music and Dance",
-        "image": "https://placehold.co/300x200?text=Music+and+Dance",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        "title": "Mexican Art and Architecture",
+        "image": "https://placehold.co/300x200?text=La+Casa+de+Frida",
+        "description": "The La Casa de Frida assignment introduced me to how architecture reflects cultural identity and history. Researching Frida Kahlo's and Diego Rivera's home designed by Juan O'Gorman taught me about the integration of functionalist design with traditional Mexican elements. I learned how the connected yet separate houses represented the complex relationship between the two artists while embodying Mexican cultural values. This exploration showed me that buildings can be cultural texts that reveal social dynamics, artistic movements, and historical contexts."
       },
       {
-        "title": "Festivities",
-        "image": "https://placehold.co/300x200?text=Festivities",
-        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque."
+        "title": "Hispanic Cultural Celebrations",
+        "image": "https://placehold.co/300x200?text=Cultural+Celebrations",
+        "description": "[Write about a cultural celebration or tradition you learned about in class. Include information about its significance, how it's celebrated, and how it connects to broader cultural values in the Spanish-speaking world - about 75-100 words]"
       }
     ]
   }
