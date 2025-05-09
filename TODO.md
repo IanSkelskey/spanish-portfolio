@@ -2,17 +2,17 @@
 
 ## 📁 General Setup
 
-- [ ] Choose an approved platform (Google Sites, Canva, Wix, etc.)
-- [ ] Select and customize a template (remove blank pages, unused placeholders)
-- [ ] Create structured tabs/sections for easy navigation
+- [x] Choose an approved platform (Google Sites, Canva, Wix, etc.)
+- [x] Select and customize a template (remove blank pages, unused placeholders)
+- [x] Create structured tabs/sections for easy navigation
 
 ## 🧱 Required ePortfolio Sections
 
 ### 1. **Introducción / About Me**
 
-- [ ] Greetings assignment post from Module 1
-- [ ] Class and college info
-- [ ] Intro statement or quote in Spanish
+- [x] Greetings assignment post from Module 1
+- [x] Class and college info
+- [x] Intro statement or quote in Spanish
 - [ ] (Optional) Video introduction
 
 ### 2. **Mis Objetivos / Goals & Vision Board**
@@ -24,7 +24,7 @@
 
 Include at least **5–7 reflections**, covering **each of the four language skills**, with:
 
-- [ ] At least 2 speaking artifacts (1 must be a video)
+- [x] At least 2 speaking artifacts (1 must be a video)
 - [ ] Listening sample
 - [ ] Reading sample
 - [ ] Writing sample

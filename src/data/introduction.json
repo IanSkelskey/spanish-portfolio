@@ -1,15 +1,15 @@
 {
   "academicInfo": {
-    "course": "Español 2011",
+    "course": "Spanish 2011",
     "institution": "CT State: Three Rivers",
-    "semester": "Primavera 2025"
+    "semester": "Spring 2025"
   },
   "quote": {
     "text": "El límite del idioma significa el límite de mi mundo.",
     "author": "Adaptado de Ludwig Wittgenstein"
   },
   "profile": {
-    "image": "https://placehold.co/300x300?text=Profile+Photo",
+    "image": "/assets/headshot.png",
     "introduction": [
       "Buenas noches. Soy Ian Skelskey. Soy Americano. Soy de Bristol, Connecticut, Estados Unidos. Ahora vivo en Southington. Soy ingeniero de software. Puedo tocar el piano y la guitarra. Mi esposa es de Argentina.",
       "Trabajo más de 40 horas por semana y tengo dos trabajos. Jugué al fútbol cuando era niño, pero ahora solo voy al gimnasio. Me gustan muchos tipos de música, pero mi favorita de España es el flamenco pop. Mi restaurante favorito es Thai Avenue en Bristol. Mi color favorito es el púrpura.",
@@ -26,6 +26,6 @@
       }
     ]
   },
-  "spanishHistory": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.",
-  "whyLearnSpanish": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  "spanishHistory": "Before this class, I had some experience with Spanish from previous coursework and personal interest. I was familiar with basic grammar and vocabulary but needed more practice with listening and speaking.",
+  "whyLearnSpanish": "Learning Spanish is important to me both personally and professionally. I want to connect better with my wife's family and eventually use Spanish in my career as a software engineer, especially in diverse workplaces or for projects that involve international teams."
 }

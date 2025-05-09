@@ -15,7 +15,7 @@ function Footer() {
           <Link to="/plan-accion">Plan de Acción</Link>
         </div>
         <div className="footer-copyright">
-          <span>© {new Date().getFullYear()} Spanish Portfolio</span>
+          <span>© {new Date().getFullYear()}  Spanish Portfolio</span>
           <span>•</span>
           <span>Hecho con <span aria-label="heart">💙</span> y <span aria-label="mate">🧉</span></span>
         </div>

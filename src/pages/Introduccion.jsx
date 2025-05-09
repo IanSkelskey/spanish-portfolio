@@ -4,6 +4,14 @@ import { useDataFetching } from '../services/dataService';
 import './Pages.css';
 import './Introduccion.css';
 
+// Add image resolver for /assets support
+function resolveImageSrc(src) {
+  if (src && src.startsWith('/assets')) {
+    return `${import.meta.env.BASE_URL}assets/${src.replace(/^\/assets\//, '')}`;
+  }
+  return src;
+}
+
 function Introduccion() {
     const { data, loading, error } = useDataFetching('introduction');
 
@@ -39,7 +47,7 @@ function Introduccion() {
 
             <div className="profile-section">
                 <img
-                    src={data.profile.image}
+                    src={resolveImageSrc(data.profile.image)}
                     alt="Foto de perfil"
                     className="profile-image"
                 />

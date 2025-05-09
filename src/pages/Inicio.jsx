@@ -3,6 +3,15 @@ import { useDataFetching } from '../services/dataService';
 import './Pages.css';
 import './Inicio.css';
 
+function resolveImageSrc(src) {
+  // If src starts with '/assets', use BASE_URL + 'assets/...'
+  if (src && src.startsWith('/assets')) {
+    return `${import.meta.env.BASE_URL}assets/${src.replace(/^\/assets\//, '')}`;
+  }
+  // Otherwise, return as is (for absolute URLs or other cases)
+  return src;
+}
+
 function Inicio() {
   const { data, loading, error } = useDataFetching('home');
 
@@ -13,7 +22,7 @@ function Inicio() {
     <PageWrapper title="Bienvenidos a mi ePortfolio de Español">
       <div className="hero-section">
         <img 
-          src={data.heroImage.src} 
+          src={resolveImageSrc(data.heroImage.src)} 
           alt={data.heroImage.alt} 
           className="hero-image" 
         />

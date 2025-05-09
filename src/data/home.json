@@ -1,21 +1,21 @@
 {
   "heroImage": {
-    "src": "/src/assets/landscape.png",
+    "src": "/assets/landscape.png",
     "alt": "Portfolio Hero"
   },
   "welcome": {
     "title": "¡Hola y bienvenidos!",
-    "content": "Este portafolio documenta mi viaje aprendiendo español y explorando las culturas del mundo hispanohablante."
+    "content": "This portfolio documents my journey learning Spanish and exploring the cultures of the Spanish-speaking world."
   },
   "sections": {
-    "title": "¿Qué encontrarás aquí?",
+    "title": "What will you find here?",
     "items": [
-      "Mi introducción y motivación para aprender español",
-      "Mis objetivos de aprendizaje",
-      "Proyectos y asignaciones completados",
-      "Exploración de la cultura hispanohablante",
-      "Mis reflexiones sobre este viaje",
-      "Plan de acción para continuar mi aprendizaje"
+      "My introduction and motivation to learn Spanish",
+      "My learning goals",
+      "Completed projects and assignments",
+      "Exploration of Hispanic culture",
+      "My reflections on this journey",
+      "Action plan to continue my learning"
     ]
   }
 }
