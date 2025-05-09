@@ -1,5 +1,6 @@
 import PageWrapper from '../components/PageWrapper';
 import { useDataFetching } from '../services/dataService';
+import ImageModal from '../components/ImageModal'; // Import the new component
 import './Pages.css';
 import './Objetivos.css';
 
@@ -29,11 +30,14 @@ function Goals() {
       <div className="vision-board">
         <h3>{data.visionBoard.title}</h3>
         <div className="vision-container">
-          <img 
-            src={resolveImageSrc(data.visionBoard.image)} 
-            alt="Vision Board" 
-            className="vision-image" 
-          />
+          {/* Replace the standard image with our ImageModal component */}
+          <div className="vision-image-container">
+            <ImageModal 
+              src={resolveImageSrc(data.visionBoard.image)} 
+              alt="Vision Board - Click to enlarge" 
+            />
+            <p className="zoom-instruction">Click on the image to zoom in and view details</p>
+          </div>
           
           {/* Vision Board Themes */}
           <div className="vision-themes">

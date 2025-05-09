@@ -10,6 +10,21 @@
   gap: 2rem;
 }
 
+/* Vision board image container */
+.vision-image-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.zoom-instruction {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-argentina-dark-blue);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 .vision-image {
   max-width: 100%;
   border-radius: var(--border-radius);
