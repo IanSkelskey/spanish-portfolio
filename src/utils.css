@@ -1,0 +1,157 @@
+/* Utility classes for common patterns */
+
+/* Layout utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-sm {
+  gap: var(--space-2);
+}
+
+.gap {
+  gap: var(--space-4);
+}
+
+.gap-lg {
+  gap: var(--space-6);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Common spacing utilities */
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-5 { margin-bottom: var(--space-5); }
+.mb-6 { margin-bottom: var(--space-6); }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-5 { margin-top: var(--space-5); }
+.mt-6 { margin-top: var(--space-6); }
+
+/* Card component base styles */
+.card-base {
+  background: var(--color-argentina-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding-desktop);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card-base:hover {
+  transform: var(--hover-lift);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Card variants */
+.card-accent-top {
+  border-top: var(--border-width) solid var(--color-accent);
+}
+
+.card-accent-left {
+  border-left: var(--border-width) solid var(--color-accent);
+}
+
+.card-blue-gradient {
+  background: linear-gradient(145deg, var(--color-argentina-blue), var(--color-argentina-dark-blue));
+  color: var(--color-text-on-blue);
+}
+
+/* Typography utilities */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+.italic { font-style: italic; }
+
+/* Status colors */
+.bg-success { background-color: var(--color-success); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-danger { background-color: var(--color-danger); }
+.bg-info { background-color: var(--color-info); }
+
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-danger { color: var(--color-danger); }
+.text-info { color: var(--color-info); }
+.text-light { color: var(--color-text-on-blue); }
+
+/* Common Visual Elements */
+.badge {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 12px;
+  font-weight: var(--font-weight-medium);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.badge-success {
+  background: var(--color-success);
+  color: var(--color-text-on-success);
+}
+
+.badge-warning {
+  background: var(--color-warning);
+  color: var(--color-text-on-warning);
+}
+
+/* Media queries for responsive utilities */
+@media (max-width: 768px) {
+  .card-base {
+    padding: var(--card-padding-tablet);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-base {
+    padding: var(--card-padding-mobile);
+  }
+}

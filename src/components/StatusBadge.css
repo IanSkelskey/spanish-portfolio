@@ -1,35 +1,37 @@
+/* Leveraging badge class from utils.css */
 .status-badge {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
+  /* These are now inherited from .badge in utils.css */
+  /* font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-2);
   border-radius: 12px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   display: inline-block;
-  white-space: nowrap;
+  white-space: nowrap; */
 }
 
 .status-badge.complete {
-  background: #4CAF50;
-  color: white;
+  background: var(--color-success);
+  color: var(--color-text-on-success);
 }
 
 .status-badge.incomplete {
-  background: #FFC107;
-  color: rgba(0,0,0,0.7);
+  background: var(--color-warning);
+  color: var(--color-text-on-warning);
 }
 
 .status-badge.warning {
-  background: #FF9800;
+  background: #E67E00; /* Darker orange for better contrast */
   color: white;
 }
 
 .status-badge.info {
-  background: var(--color-argentina-blue);
-  color: white;
+  background: var(--color-info);
+  color: var(--color-text-on-blue);
 }
 
 @media (max-width: 480px) {
   .status-badge {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
+    font-size: calc(var(--font-size-xs) - 0.05rem);
+    padding: calc(var(--space-1) - 0.05rem) var(--space-2);
   }
 }

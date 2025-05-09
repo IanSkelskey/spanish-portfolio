@@ -19,12 +19,12 @@
 .zoom-instruction {
   text-align: center;
   font-style: italic;
-  color: var(--color-argentina-dark-blue);
+  color: #2F5A88; /* Darker blue for better contrast (>4.5:1) */
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  opacity: 0.8;
 }
 
+/* Vision board image */
 .vision-image {
   max-width: 100%;
   border-radius: var(--border-radius);
@@ -204,6 +204,19 @@
 @media (prefers-color-scheme: dark) {
   .goals-list li {
     background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .zoom-instruction {
+    color: #9DCFFF; /* Much lighter blue for dark mode with good contrast */
+  }
+  
+  .vision-theme h4,
+  .goals-card .content-card-title {
+    color: #B8DCFF; /* Lighter blue for headings in dark mode */
+  }
+  
+  .goal-category {
+    color: #B8DCFF; /* Lighter blue for better contrast against dark backgrounds */
   }
 }
 

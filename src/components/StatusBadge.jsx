@@ -3,10 +3,11 @@ import './StatusBadge.css';
 
 /**
  * Status indicator badge used throughout the portfolio
+ * Now using utility classes from utils.css
  */
 function StatusBadge({ status, label, className = '' }) {
   return (
-    <span className={`status-badge ${status} ${className}`}>
+    <span className={`badge status-badge ${status} ${className}`}>
       {label}
     </span>
   );

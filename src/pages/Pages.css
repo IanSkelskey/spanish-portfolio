@@ -165,3 +165,11 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/* Dark mode adjustments for better contrast */
+@media (prefers-color-scheme: dark) {
+  .resource-card h4,
+  .card h4 {
+    color: #B8DCFF; /* Lighter blue for headings in dark mode */
+  }
+}

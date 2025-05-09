@@ -29,8 +29,8 @@
 }
 
 .footer-links a {
-  color: var(--color-link);
-  opacity: 0.85;
+  color: #2F5A88; /* Darker blue for better contrast (>4.5:1) against light background */
+  opacity: 0.95; /* Maintaining high opacity for visibility */
   transition: all var(--transition);
   position: relative;
 }
@@ -59,16 +59,17 @@
 }
 
 .footer-copyright {
-  opacity: 0.7;
+  opacity: 0.85; /* Increased from 0.7 for better contrast */
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-text);
+  color: #505A68; /* Darker gray for better contrast (>4.5:1) against light background */
 }
 
 .footer-copyright span {
   display: inline-flex;
+  color: #464F5B; /* Making the "Made with 💙 and 🧉" text darker */
 }
 
 /* Dark mode specific adjustments */
@@ -78,8 +79,16 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
   
+  .footer-links a {
+    color: #9DCFFF; /* Already has good contrast in dark mode */
+  }
+  
   .footer-copyright {
-    color: var(--color-text);
+    color: #D1D8E0; /* Lighter color with better contrast against dark backgrounds */
+  }
+
+  .footer-copyright span {
+    color: #D1D8E0; /* Ensuring good contrast in dark mode too */
   }
 }
 

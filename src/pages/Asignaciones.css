@@ -86,28 +86,15 @@
 
 .skill-section h3 {
   position: relative;
-  padding-bottom: 0.7rem;
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.skill-section h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--color-accent);
-  border-radius: 2px;
-}
-
 .missing-badge {
   font-size: 0.7rem;
-  background: #FFC107;
-  color: rgba(0,0,0,0.7);
+  background: #E6A800; /* Darker yellow for better contrast */
+  color: #000000; /* Black text for contrast */
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
   font-weight: normal;
@@ -167,13 +154,13 @@
 }
 
 .status-indicator.complete {
-  background: #4CAF50;
+  background: #2E7D32; /* Match the darker green from StatusBadge for better contrast with white text */
   color: white;
 }
 
 .status-indicator.incomplete {
-  background: #FFC107;
-  color: rgba(0,0,0,0.7);
+  background: #E6A800; /* Darker yellow for better contrast */
+  color: #000000; /* Black text for contrast */
 }
 
 .project-type {
@@ -206,7 +193,7 @@
 .reflection-box h5 {
   margin-top: 0;
   font-size: 1rem;
-  color: var(--color-argentina-dark-blue);
+  color: #30516D; /* Darker blue for better contrast */
   margin-bottom: 0.7rem;
   display: flex;
   justify-content: space-between;
@@ -214,15 +201,15 @@
 }
 
 .placeholder-notice {
-  color: #856404;
-  background-color: #fff3cd;
+  color: #664D03; /* Darker for better contrast */
+  background-color: #FFF3CD;
   padding: 0.75rem;
   border-radius: var(--border-radius-sm);
   margin-bottom: 0.75rem;
 }
 
 .placeholder-text {
-  color: #6c757d;
+  color: #5C636A; /* Darker gray for better contrast */
   font-style: italic;
 }
 
@@ -343,7 +330,25 @@
   
   .placeholder-notice {
     background-color: rgba(255, 243, 205, 0.2);
-    color: #ffeeb5;
+    color: #FFE69C; /* Lighter yellow for dark mode */
+  }
+  
+  .reflection-box h5 {
+    color: #B8DCFF; /* Lighter color in dark mode for better contrast */
+  }
+
+  .placeholder-text {
+    color: #FFFFFF; /* Using white text for maximum contrast in dark mode */
+  }
+  
+  .status-indicator.incomplete {
+    background: #FFD166;
+    color: #15140A; /* Very dark for better contrast */
+  }
+  
+  .missing-badge {
+    background: #FFD166;
+    color: #15140A; /* Very dark for better contrast */
   }
 }
 

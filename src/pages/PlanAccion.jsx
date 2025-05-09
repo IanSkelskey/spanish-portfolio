@@ -55,7 +55,7 @@ function ActionPlan() {
                   <span className="timeline-period-icon">{getTimelineIcon(period.title)}</span>
                 </div>
                 
-                <ContentCard className="timeline-content">
+                <div className="timeline-content card-base">
                   <h4>
                     <span className="timeline-period-title">{translateTitle(period.title)}</span>
                     <span className="timeline-period-original">{period.title}</span>
@@ -67,7 +67,7 @@ function ActionPlan() {
                     ))} 
                     className="timeline-list"
                   />
-                </ContentCard>
+                </div>
               </div>
             ))}
           </div>

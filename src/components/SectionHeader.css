@@ -1,9 +1,9 @@
 .section-header {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-6);
   position: relative;
-  padding-bottom: 0.7rem;
+  padding-bottom: var(--space-3);
 }
 
 .section-header::after {
@@ -18,49 +18,50 @@
 }
 
 .section-icon {
-  font-size: 1.8rem;
-  margin-right: 0.75rem;
+  font-size: var(--font-size-xl);
+  margin-right: var(--space-3);
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--color-argentina-gray);
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
+  border-radius: var(--border-radius-round);
 }
 
 .section-title {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--font-size-lg);
   display: flex;
   flex-direction: column;
+  color: var(--color-argentina-dark-blue);
 }
 
 .section-subtitle {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   opacity: 0.7;
   font-style: italic;
-  margin-top: 0.25rem;
+  margin-top: var(--space-1);
   font-weight: normal;
 }
 
 .section-badge {
   margin-left: auto;
-  font-size: 0.7rem;
-  background: #FFC107;
-  color: rgba(0,0,0,0.7);
-  padding: 0.25rem 0.5rem;
+  font-size: var(--font-size-xs);
+  background: var(--color-warning);
+  color: var(--color-text-on-warning);
+  padding: var(--space-1) var(--space-2);
   border-radius: 12px;
   font-weight: normal;
 }
 
 @media (max-width: 768px) {
   .section-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-5);
   }
 
   .section-icon {
-    font-size: 1.5rem;
+    font-size: var(--font-size-lg);
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -68,16 +69,22 @@
 
 @media (max-width: 480px) {
   .section-header {
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.2rem;
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
   }
 
   .section-title {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
   }
 
   .section-header::after {
     width: 50px;
     height: 2px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-title {
+    color: var(--color-heading);
   }
 }

@@ -97,7 +97,7 @@
 .zoom-instruction {
   display: inline-block;
   margin-left: 5px;
-  color: var(--color-accent);
+  color: #D0740A; /* Darker amber color for better contrast against both light and dark backgrounds */
 }
 
 @keyframes fadeIn {

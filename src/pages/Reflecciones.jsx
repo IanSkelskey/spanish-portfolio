@@ -23,7 +23,7 @@ function Reflections() {
           
           {/* Reflection Summary */}
           <div className="reflection-summary">
-            <ContentCard className="summary-card">
+            <div className="summary-card card-blue-gradient">
               <div className="summary-icon">📝</div>
               <div className="summary-content">
                 <h4>Your Reflection Journey</h4>
@@ -31,7 +31,7 @@ function Reflections() {
                 totaling approximately {data.sections.reduce((total, section) => 
                   total + countWords(section.content), 0)} words of thoughtful analysis.</p>
               </div>
-            </ContentCard>
+            </div>
           </div>
           
           {/* Enhanced reflection sections */}
@@ -62,7 +62,7 @@ function Reflections() {
                     {section.instruction}
                   </div>
                   
-                  <ContentCard className="reflection-card">
+                  <div className="reflection-card card-base card-accent-top">
                     <div className="reflection-content">
                       <p>{section.content}</p>
                     </div>
@@ -74,14 +74,14 @@ function Reflections() {
                         className={`word-count ${isEnough ? 'sufficient' : 'insufficient'}`}
                       />
                     </div>
-                  </ContentCard>
+                  </div>
                 </div>
               );
             })}
           </div>
           
           {/* Learning Journey Visualization */}
-          <ContentCard className="journey-visualization">
+          <div className="journey-visualization card-base">
             <h3>Your Spanish Language Journey</h3>
             <div className="journey-timeline">
               <div className="journey-point start">
@@ -102,7 +102,7 @@ function Reflections() {
             <div className="journey-description">
               <p>This visualization represents your Spanish learning journey from when you started the course to your current level, with your B2 fluency goal on the horizon. The solid line shows your completed progress, while the dotted line represents your path forward.</p>
             </div>
-          </ContentCard>
+          </div>
         </>
       )}
     </PageLoader>

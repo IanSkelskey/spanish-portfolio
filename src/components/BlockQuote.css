@@ -1,8 +1,8 @@
 .block-quote {
   background: linear-gradient(145deg, var(--color-argentina-dark-blue), #295888);
-  padding: 3rem 2rem;
+  padding: var(--space-8) var(--space-6);
   border-radius: var(--border-radius);
-  margin: 2.5rem 0;
+  margin: var(--space-7) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,8 +12,8 @@
 .block-quote::before {
   content: '"';
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: var(--space-5);
+  left: var(--space-5);
   font-size: 8rem;
   opacity: 0.1;
   color: white;
@@ -36,32 +36,32 @@
 .block-quote blockquote {
   margin: 0;
   font-style: italic;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #ffffff;
-  font-family: 'Milonga', serif;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-heading);
+  color: #ffffff; /* Ensuring good contrast on the dark blue background */
+  font-family: var(--font-heading);
   position: relative;
   z-index: 1;
 }
 
 .block-quote cite {
   display: block;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+  opacity: 0.9; /* Increased from 0.8 for better contrast */
   color: white;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .block-quote {
-    padding: 2rem 1.5rem;
-    margin: 1.5rem 0;
+    padding: var(--space-6) var(--space-5);
+    margin: var(--space-5) 0;
   }
   
   .block-quote blockquote {
-    font-size: 1.2rem;
+    font-size: var(--font-size-lg);
   }
   
   .block-quote::before, 
@@ -72,19 +72,19 @@
 
 @media (max-width: 480px) {
   .block-quote {
-    padding: 1.5rem 1rem;
-    margin: 1rem 0;
+    padding: var(--space-5) var(--space-4);
+    margin: var(--space-4) 0;
   }
   
   .block-quote blockquote {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
   }
   
   .block-quote::before {
     font-size: 5rem;
-    top: 5px;
-    left: 5px;
+    top: var(--space-2);
+    left: var(--space-2);
   }
   
   .block-quote::after {
@@ -94,18 +94,18 @@
   }
   
   .block-quote cite {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
+    margin-top: var(--space-2);
+    font-size: var(--font-size-xs);
   }
 }
 
 @media (max-width: 360px) {
   .block-quote {
-    padding: 1.2rem 0.75rem;
-    margin: 0.75rem 0;
+    padding: var(--space-4) var(--space-3);
+    margin: var(--space-3) 0;
   }
   
   .block-quote blockquote {
-    font-size: 0.95rem;
+    font-size: var(--font-size-sm);
   }
 }

@@ -1,25 +1,15 @@
 /* PlanAccion (Action Plan) page specific styles */
 
 .plan-intro {
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--space-7);
 }
 
 .plan-banner {
-  max-width: 100%;
-  border-radius: var(--border-radius);
-  margin-bottom: 1.5rem;
-  width: 100%;
-  object-fit: cover;
-  box-shadow: var(--card-shadow);
-  transition: transform var(--transition);
-}
-
-.plan-banner:hover {
-  transform: scale(1.01);
+  composes: page-banner-image;
 }
 
 .plan-intro-text {
-  font-size: 1.1rem;
+  font-size: var(--font-size-md);
   font-style: italic;
   text-align: center;
   max-width: 800px;
@@ -28,28 +18,14 @@
 }
 
 .plan-reflection {
-  margin-bottom: 3rem;
-}
-
-/* Timeline Title */
-.timeline-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.timeline-icon {
-  font-size: 1.6rem;
-  margin-right: 0.75rem;
-  display: inline-block;
+  margin-bottom: var(--space-8);
 }
 
 /* Modern Visual Timeline */
 .timeline-container {
   position: relative;
-  margin: 3rem 0;
-  padding: 1rem 0;
+  margin: var(--space-8) 0;
+  padding: var(--space-4) 0;
 }
 
 .timeline-line {
@@ -67,7 +43,7 @@
 .timeline-item {
   position: relative;
   padding-left: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-8);
 }
 
 .timeline-item:last-child {
@@ -81,7 +57,7 @@
   width: 3rem;
   height: 3rem;
   background: var(--color-argentina-blue);
-  border-radius: 50%;
+  border-radius: var(--border-radius-round);
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -91,14 +67,10 @@
 }
 
 .timeline-period-icon {
-  font-size: 1.4rem;
+  font-size: var(--font-size-lg);
 }
 
 .timeline-content {
-  background: var(--color-argentina-gray);
-  padding: 1.8rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
   position: relative;
 }
 
@@ -115,103 +87,68 @@
 
 .timeline-content h4 {
   margin-top: 0;
-  font-size: 1.3rem;
+  font-size: var(--font-size-lg);
   color: var(--color-argentina-dark-blue);
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--space-4);
   display: flex;
   flex-direction: column;
 }
 
 .timeline-period-original {
-  font-size: 0.9rem;
-  opacity: 0.7;
+  font-size: var(--font-size-sm);
+  opacity: 1; /* For better contrast */
   font-style: italic;
-  margin-top: 0.25rem;
+  margin-top: var(--space-1);
   font-weight: normal;
+  color: var(--color-argentina-dark-blue);
 }
 
 /* Timeline Period Styling */
 .period-0 .timeline-marker {
-  background: #4CAF50;
+  background: var(--color-success);
 }
 
 .period-1 .timeline-marker {
-  background: #2196F3;
+  background: var(--color-info);
 }
 
 .period-2 .timeline-marker {
   background: #9C27B0;
 }
 
-.timeline-list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.timeline-list li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  line-height: 1.5;
-}
-
-.timeline-list li::before {
-  content: '•';
-  color: var(--color-accent);
-  font-weight: bold;
-  position: absolute;
-  left: -1.2rem;
-}
-
 .timeline-task {
   display: inline-block;
 }
 
+/* Use CustomList styles instead of duplicating */
+.timeline-list {
+}
+
 /* Resources Section */
 .resources-section {
-  margin: 3rem 0;
+  margin: var(--space-8) 0;
 }
 
+/* Use the grid from Pages.css */
 .resources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
 }
 
+/* Use card-base from utils.css instead */
 .resource-card {
-  background: var(--color-argentina-gray);
-  padding: 1.8rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  height: 100%;
-  transition: transform var(--transition);
-}
-
-.resource-card:hover {
-  transform: translateY(-7px);
 }
 
 .resource-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-4);
   text-align: center;
 }
 
 .resource-card h4 {
   margin-top: 0;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
   color: var(--color-argentina-dark-blue);
-  font-size: 1.2rem;
-}
-
-.resource-card ul {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.resource-card li {
-  margin-bottom: 0.6rem;
+  font-size: var(--font-size-lg);
 }
 
 /* Dark mode adjustments */
@@ -227,12 +164,25 @@
   .timeline-marker {
     box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 8px rgba(117, 170, 219, 0.1);
   }
+  
+  .plan-intro-text {
+    color: var(--color-heading);
+  }
+  
+  .timeline-content h4 {
+    color: var(--color-heading);
+  }
+  
+  .timeline-period-original {
+    color: #D1D8E0;
+    opacity: 0.9;
+  }
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .timeline-container {
-    margin: 2rem 0;
+    margin: var(--space-6) 0;
   }
   
   .timeline-item {
@@ -250,15 +200,7 @@
   }
   
   .timeline-period-icon {
-    font-size: 1.2rem;
-  }
-  
-  .timeline-content {
-    padding: 1.5rem;
-  }
-  
-  .resources-grid {
-    gap: 1rem;
+    font-size: var(--font-size-md);
   }
 }
 
@@ -278,11 +220,7 @@
   }
   
   .timeline-period-icon {
-    font-size: 1rem;
-  }
-  
-  .timeline-content {
-    padding: 1.2rem;
+    font-size: var(--font-size-base);
   }
   
   .timeline-content:before {
