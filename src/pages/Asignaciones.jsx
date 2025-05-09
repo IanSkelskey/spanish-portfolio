@@ -4,6 +4,14 @@ import { extractYouTubeId, createYouTubeEmbedUrl, isYouTubeUrl } from '../utils/
 import './Pages.css';
 import './Asignaciones.css';
 
+// Add image resolver for /assets support
+function resolveImageSrc(src) {
+  if (src && src.startsWith('/assets')) {
+    return `${import.meta.env.BASE_URL}assets/${src.replace(/^\/assets\//, '')}`;
+  }
+  return src;
+}
+
 function Assignments() {
   const { data, loading, error } = useDataFetching('assignments');
 
@@ -43,7 +51,7 @@ function Assignments() {
     
     // Case 2: Project has an image
     if (project.image) {
-      return <img src={project.image} alt={project.title} />;
+      return <img src={resolveImageSrc(project.image)} alt={project.title} />;
     }
     
     // Case 3: Project is marked as video but not YouTube or no valid link
