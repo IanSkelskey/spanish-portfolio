@@ -12,22 +12,22 @@
     "items": [
       {
         "title": "Literature & Arts",
-        "image": "https://placehold.co/300x200?text=Literature+and+Arts",
+        "image": "/assets/literature.png",
         "description": "Explored works by Hispanic authors like Horacio Quiroga and learned about influential artists such as Frida Kahlo and Diego Rivera."
       },
       {
         "title": "History & Geography",
-        "image": "https://placehold.co/300x200?text=History+and+Geography",
+        "image": "/assets/history.png",
         "description": "Studied key historical events and geographical features that have shaped various Spanish-speaking countries."
       },
       {
         "title": "Daily Life & Customs",
-        "image": "https://placehold.co/300x200?text=Daily+Life",
+        "image": "/assets/customs.png",
         "description": "Learned about everyday practices, social norms, and traditions in Hispanic countries."
       },
       {
         "title": "Music & Performance",
-        "image": "https://placehold.co/300x200?text=Music",
+        "image": "/assets/music.png",
         "description": "Discovered diverse musical traditions from flamenco to reggaeton and their cultural significance."
       }
     ]

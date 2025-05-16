@@ -69,25 +69,6 @@ function Introduccion() {
     
                     <SectionHeader title="Why do I study Spanish?" />
                     <p>{data.whyLearnSpanish}</p>
-    
-                    {/* Video Introduction Section - Optional but mentioned in requirements */}
-                    <SectionHeader title="Introduction Video" />
-                    <ContentCard>
-                        <p className="video-placeholder">
-                            [The introduction video will be added soon]
-                        </p>
-                        {/* Uncomment when you have a video
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/your-video-id" 
-                            title="Introduction Video" 
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen>
-                        </iframe>
-                        */}
-                    </ContentCard>
                 </>
             )}
         </PageLoader>

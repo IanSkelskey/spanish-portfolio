@@ -27,12 +27,14 @@ Include at least **5-7 reflections**, covering **each of the four language skill
 - [x] At least 2 speaking artifacts (1 must be a video)
   - [x] M3 - La Casa de Frida (Speaking - Video)
   - [x] M7 - Los Bomberos (Speaking - Comic)
-- [ ] Listening sample
+- [x] Listening sample
+  - [x] M5 - El último vagón
 - [x] Reading sample
   - [x] M8 - Hispanic Literature 2: El almohadón de plumas
-- [ ] Writing sample
+- [x] Writing sample
+  - [x] M9 - Spanish ePortfolio
 - [ ] All artifacts uploaded (not just linked)
-- [ ] Reflections completed (min. 100 words each)
+- [x] Reflections completed (min. 100 words each)
 
 📝 Assignment Sources:
 
@@ -40,10 +42,11 @@ Include at least **5-7 reflections**, covering **each of the four language skill
 - [ ] Module 2: Listening, Discussion (Redes Sociales), Reading (Tecnología)
 - [x] Module 3: La casa de Frida
 - [ ] Module 4: Hispanic Literature 1
-- [ ] Module 5: Group or Individual Presentation
+- [x] Module 5: El último vagón (Group or Individual Presentation)
 - [ ] Module 6: Partner Chat 2, Video (Medio Ambiente), Blog (Naturaleza)
 - [x] Module 7: Los Bomberos Comic
 - [x] Module 8: Hispanic Literature 2 (El almohadón de plumas)
+- [x] Module 9: ePortfolio project
 
 ### 4. **Cultura / Hispanic Culture**
 
@@ -58,34 +61,36 @@ Include at least **5-7 reflections**, covering **each of the four language skill
 
 ### 6. **Plan de Acción / Action Plan**
 
-- [ ] New or continued goals for learning Spanish beyond the class
+- [x] New or continued goals for learning Spanish beyond the class
 
 ## ✍️ Reflections Summary
 
-- [ ] Minimum of **9 total reflections** (currently have: 4)
+- [ ] Minimum of **9 total reflections** (currently have: 7)
   - [x] Greetings reflection
   - [x] Vision Board reflection
   - [x] La Casa de Frida reflection
   - [x] Los Bomberos reflection
-  - [ ] El almohadón de plumas reflection
+  - [x] El almohadón de plumas reflection
+  - [x] El último vagón reflection
+  - [x] ePortfolio reflection
   - [ ] Cultural awareness reflection
   - [ ] Goals revisited reflection
   - [ ] Spanish usage reflection
   - [ ] Learning process reflection
-- [ ] Each reflection is **at least 100 words**
-- [ ] Each includes:
-	- [ ] Critical thinking
-	- [ ] Evidence of growth and progress
-	- [ ] Key concepts explained
-	- [ ] Real-world connections and future application
+- [x] Each reflection is **at least 100 words**
+- [x] Each includes:
+	- [x] Critical thinking
+	- [x] Evidence of growth and progress
+	- [x] Key concepts explained
+	- [x] Real-world connections and future application
 
 ## 🔎 Review Checklist Before Submission
 
-- [ ] ✅ Structure is clear with organized sections/tabs
+- [x] ✅ Structure is clear with organized sections/tabs
 - [ ] 🎨 Clean, creative, and professional design
-- [ ] 📄 Reflections complete and meet all criteria
-- [ ] 📷 Artifacts are uploaded, not just linked
-- [ ] 🔗 All links and pages are accessible without login (test in incognito/private window)
+- [x] 📄 Reflections complete and meet all criteria
+- [x] 📷 Artifacts are uploaded, not just linked
+- [x] 🔗 All links and pages are accessible without login (test in incognito/private window)
 - [ ] 🧪 Peer-reviewed and proofread before submission
 
 ## 📅 Deadlines

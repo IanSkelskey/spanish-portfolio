@@ -3,6 +3,7 @@ import PageLoader from '../components/PageLoader';
 import PageBanner from '../components/PageBanner';
 import ContentCard from '../components/ContentCard';
 import SectionHeader from '../components/SectionHeader';
+import { resolveImagePath } from '../utils/imageUtils';
 import './Pages.css';
 import './Cultura.css';
 
@@ -14,7 +15,7 @@ function Culture() {
       {data && (
         <>
           <PageBanner 
-            src={data.banner.image} 
+            src={resolveImagePath(data.banner.image)}
             alt={data.banner.alt} 
           />
           
@@ -32,7 +33,7 @@ function Culture() {
                 title={aspect.title}
               >
                 <img 
-                  src={aspect.image} 
+                  src={resolveImagePath(aspect.image)}
                   alt={aspect.title} 
                 />
                 <p>{aspect.description}</p>

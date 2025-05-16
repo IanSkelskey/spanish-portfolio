@@ -3,17 +3,11 @@ import { useDataFetching } from '../services/dataService';
 import PageLoader from '../components/PageLoader';
 import ContentCard from '../components/ContentCard';
 import SectionHeader from '../components/SectionHeader';
-import StatusBadge from '../components/StatusBadge';
 import './Pages.css';
 import './Reflecciones.css';
 
 function Reflections() {
   const { data, loading, error } = useDataFetching('reflections');
-
-  // Function to count words in a text
-  const countWords = (text) => {
-    return text.split(/\s+/).filter(word => word.length > 0).length;
-  };
 
   return (
     <PageLoader loading={loading} error={error} title="Final Reflections / Reflexiones Finales">
@@ -27,9 +21,7 @@ function Reflections() {
               <div className="summary-icon">📝</div>
               <div className="summary-content">
                 <h4>Your Reflection Journey</h4>
-                <p>Across your portfolio, you've written {data.sections.length} major reflections 
-                totaling approximately {data.sections.reduce((total, section) => 
-                  total + countWords(section.content), 0)} words of thoughtful analysis.</p>
+                <p>Throughout this portfolio, you've documented your Spanish learning journey through thoughtful reflections on your goals, experiences, and growth.</p>
               </div>
             </div>
           </div>
@@ -37,9 +29,6 @@ function Reflections() {
           {/* Enhanced reflection sections */}
           <div className="reflections-container">
             {data.sections.map((section, index) => {
-              const wordCount = countWords(section.content);
-              const isEnough = wordCount >= 100;
-              
               let icon = "📝";
               if (section.title === "Goals Achieved" || section.title === "Objetivos cumplidos") icon = "🎯";
               else if (section.title === "Using Spanish" || section.title === "Uso del Español") icon = "🗣️";
@@ -65,14 +54,6 @@ function Reflections() {
                   <div className="reflection-card card-base card-accent-top">
                     <div className="reflection-content">
                       <p>{section.content}</p>
-                    </div>
-                    
-                    <div className="reflection-footer">
-                      <StatusBadge 
-                        status={isEnough ? 'complete' : 'warning'} 
-                        label={`${wordCount} words${!isEnough ? ' (Minimum 100 words required)' : ''}`}
-                        className={`word-count ${isEnough ? 'sufficient' : 'insufficient'}`}
-                      />
                     </div>
                   </div>
                 </div>

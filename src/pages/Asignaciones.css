@@ -4,81 +4,6 @@
   margin-bottom: 2.5rem;
 }
 
-/* New Skills Summary Section */
-.skills-summary {
-  background: var(--color-argentina-gray);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: var(--card-shadow);
-}
-
-.skill-progress-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.skill-progress {
-  display: flex;
-  align-items: center;
-  background: var(--color-bg-alt);
-  border-radius: var(--border-radius-sm);
-  padding: 0.75rem 1rem;
-  transition: transform var(--transition);
-}
-
-.skill-progress:hover {
-  transform: translateY(-3px);
-}
-
-.skill-progress.complete {
-  border-left: 4px solid #4CAF50;
-}
-
-.skill-progress.incomplete {
-  border-left: 4px solid #FFC107;
-}
-
-.skill-icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.04);
-  border-radius: 50%;
-  margin-right: 0.75rem;
-}
-
-.skill-icon-inner {
-  font-size: 1.25rem;
-}
-
-.skill-info {
-  flex: 1;
-}
-
-.skill-info h4 {
-  margin: 0 0 0.25rem;
-  font-size: 0.9rem;
-}
-
-.status-badge {
-  font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 12px;
-  background: var(--color-argentina-blue);
-  color: white;
-  display: inline-block;
-}
-
-.skill-progress.incomplete .status-badge {
-  background: #FFC107;
-  color: rgba(0,0,0,0.7);
-}
-
 /* Enhanced Section Styling */
 .skill-section {
   margin: 3rem 0;
@@ -89,16 +14,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.missing-badge {
-  font-size: 0.7rem;
-  background: #E6A800; /* Darker yellow for better contrast */
-  color: #000000; /* Black text for contrast */
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
-  font-weight: normal;
-  margin-left: 0.5rem;
 }
 
 /* Enhanced Project Cards */
@@ -121,10 +36,6 @@
   flex-direction: column;
 }
 
-.project-card.incomplete {
-  border-top-color: #FFC107;
-}
-
 .project-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
@@ -142,25 +53,6 @@
   font-size: 1.2rem;
   color: var(--color-argentina-dark-blue);
   flex: 1;
-}
-
-.status-indicator {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
-  font-weight: 500;
-  margin-left: 0.5rem;
-  white-space: nowrap;
-}
-
-.status-indicator.complete {
-  background: #2E7D32; /* Match the darker green from StatusBadge for better contrast with white text */
-  color: white;
-}
-
-.status-indicator.incomplete {
-  background: #E6A800; /* Darker yellow for better contrast */
-  color: #000000; /* Black text for contrast */
 }
 
 .project-type {
@@ -200,19 +92,6 @@
   align-items: center;
 }
 
-.placeholder-notice {
-  color: #664D03; /* Darker for better contrast */
-  background-color: #FFF3CD;
-  padding: 0.75rem;
-  border-radius: var(--border-radius-sm);
-  margin-bottom: 0.75rem;
-}
-
-.placeholder-text {
-  color: #5C636A; /* Darker gray for better contrast */
-  font-style: italic;
-}
-
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -233,46 +112,6 @@
   color: var(--color-argentina-text);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-/* Portfolio Status Summary */
-.portfolio-status {
-  background: linear-gradient(145deg, var(--color-argentina-blue), var(--color-argentina-dark-blue));
-  color: white;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  margin: 3rem 0;
-}
-
-.portfolio-status h3 {
-  color: white;
-  margin-top: 0;
-}
-
-.status-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.status-item {
-  background: rgba(255,255,255,0.1);
-  padding: 1rem;
-  border-radius: var(--border-radius-sm);
-  text-align: center;
-}
-
-.status-label {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.status-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: 'Milonga', serif;
 }
 
 /* Enhanced Video Container */
@@ -297,17 +136,6 @@
   border-radius: var(--border-radius-sm);
 }
 
-.video-placeholder {
-  background: var(--color-argentina-gray);
-  padding: 2.5rem;
-  border-radius: var(--border-radius-sm);
-  text-align: center;
-  color: #666;
-  font-style: italic;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
-  border: 1px dashed rgba(0,0,0,0.1);
-}
-
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   .reflection-box {
@@ -315,40 +143,8 @@
     border-left: 3px solid var(--color-accent);
   }
   
-  .video-placeholder {
-    color: rgba(255,255,255,0.6);
-    border: 1px dashed rgba(255,255,255,0.2);
-  }
-  
-  .skill-progress {
-    background: rgba(255,255,255,0.05);
-  }
-  
-  .skill-icon {
-    background: rgba(255,255,255,0.1);
-  }
-  
-  .placeholder-notice {
-    background-color: rgba(255, 243, 205, 0.2);
-    color: #FFE69C; /* Lighter yellow for dark mode */
-  }
-  
   .reflection-box h5 {
     color: #B8DCFF; /* Lighter color in dark mode for better contrast */
-  }
-
-  .placeholder-text {
-    color: #FFFFFF; /* Using white text for maximum contrast in dark mode */
-  }
-  
-  .status-indicator.incomplete {
-    background: #FFD166;
-    color: #15140A; /* Very dark for better contrast */
-  }
-  
-  .missing-badge {
-    background: #FFD166;
-    color: #15140A; /* Very dark for better contrast */
   }
 }
 
@@ -357,14 +153,6 @@
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
-  }
-  
-  .portfolio-status {
-    padding: 1.5rem;
-  }
-  
-  .status-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -377,9 +165,5 @@
   .project-header {
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  .status-indicator {
-    margin: 0.5rem 0 0 0;
   }
 }
